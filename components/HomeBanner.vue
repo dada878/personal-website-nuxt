@@ -1,0 +1,97 @@
+<template>
+  <div class="banner">
+    <div>
+      <h1 class="title">Dada878</h1>
+      <h2 class="subtitle">歡迎你來造訪本網站 owo</h2>
+    </div>
+    <div class="links">
+      <a target="_blank" href="https://github.com/dada878">
+        <font-awesome-icon icon="fa-brands fa-github" />
+      </a>
+      <a target="_blank" href="https://google.com">
+        <font-awesome-icon icon="fa-brands fa-discord" />
+      </a>
+      <a target="_blank" href="https://google.com">
+        <font-awesome-icon icon="fa-solid fa-envelope" />
+      </a>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faDiscord, } from '@fortawesome/free-brands-svg-icons';
+library.add(faGithub, faDiscord, faEnvelope);
+</script>
+
+<style scoped lang="scss">
+.banner {
+  background-image: linear-gradient(60deg, #29323c 0%, #415366 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  .title {
+    opacity: 0;
+    animation: fade-in 700ms 0s forwards;
+    font-weight: 400;
+    font-size: calc(2.5rem + 3vw);
+    margin: 0rem;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    animation: fade-in 700ms .5s forwards;
+    font-size: calc(1.5rem + 1vw);
+    margin: 0rem;
+    opacity: 0;
+  }
+
+  .links {
+    animation: fade-in 700ms 1s forwards;
+    background-color: #ffffff10;
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    opacity: 0;
+    a {
+      &:nth-child(1) {
+        animation: fade-in 700ms 1.2s forwards;
+      }
+      &:nth-child(2) {
+        animation: fade-in 700ms 1.4s forwards;
+      }
+      &:nth-child(3) {
+        animation: fade-in 700ms 1.6s forwards;
+      }
+      color: #dfe1e8;
+      opacity: 0;
+    }
+    svg {
+      opacity: 0.5;
+      font-size: 3rem;
+      transition: 300ms;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
