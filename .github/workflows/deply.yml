@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate Content
-        run: curl https://hackmd.io/api/@dailyOops/overview > content.json
+        run: curl https://hackmd.io/api/@dada878/overview > public/content.json
     # - uses: actions/checkout@v3
     # - name: Set timezone to Asia/Taipei
     #   uses: szenius/set-timezone@v1.0

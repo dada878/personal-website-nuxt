@@ -12,9 +12,15 @@ import PageNavbar from './components/PageNavbar.vue';
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
 
 * {
   font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
+}
+
+pre > code {
+  font-family: "Source Code Pro", monospace;
+  tab-size: 4;
 }
 
 .router {
