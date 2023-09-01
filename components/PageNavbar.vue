@@ -4,9 +4,9 @@
             <li>
                 <nuxt-link to="/">首頁</nuxt-link>
             </li>
-            <li>
+            <!-- <li>
                 <nuxt-link to="/projects">作品集</nuxt-link>
-            </li>
+            </li> -->
             <li>
                 <nuxt-link to="/blog">部落格</nuxt-link>
             </li>

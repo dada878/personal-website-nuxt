@@ -1,0 +1,993 @@
+{
+    "user": {
+        "canViewAll": true,
+        "canManage": true,
+        "upgraded": false,
+        "teams": [
+            {
+                "name": "[SCINT]北臺灣資訊社群",
+                "path": "scint",
+                "logo": "https://uploads-public.hackmd.io/QMumISD.png",
+                "description": null,
+                "createdAt": "2023-02-11T12:31:50.941Z",
+                "visibility": "private"
+            },
+            {
+                "name": "Business",
+                "path": "mccbusiness",
+                "logo": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI5NiIgd2lkdGg9Ijk2IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5NiA5NiI+PGc+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjMmFkZDVhIiAvPjx0ZXh0IGZvbnQtc2l6ZT0iNjRweCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYiPjx0c3BhbiB4PSI0OCIgeT0iNzIiIHN0cm9rZS13aWR0aD0iLjI2NDU4cHgiIGZpbGw9IiNmZmZmZmYiPk08L3RzcGFuPjwvdGV4dD48L2c+PC9zdmc+",
+                "description": "Personal business workspace",
+                "createdAt": "2023-04-04T20:10:28.194Z",
+                "visibility": "private"
+            },
+            {
+                "name": "School",
+                "path": "school878",
+                "logo": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI5NiIgd2lkdGg9Ijk2IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5NiA5NiI+PGc+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjM2EwNGVkIiAvPjx0ZXh0IGZvbnQtc2l6ZT0iNjRweCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYiPjx0c3BhbiB4PSI0OCIgeT0iNzIiIHN0cm9rZS13aWR0aD0iLjI2NDU4cHgiIGZpbGw9IiNmZmZmZmYiPlM8L3RzcGFuPjwvdGV4dD48L2c+PC9zdmc+",
+                "description": null,
+                "createdAt": "2023-06-21T11:30:49.893Z",
+                "visibility": "private"
+            }
+        ],
+        "name": "Dada878",
+        "userpath": "dada878",
+        "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+        "biography": null,
+        "createdAt": "2022-10-15T13:28:12.051Z"
+    },
+    "notes": [
+        {
+            "id": "tfpDA2GQRK6GZUWMvLby0g",
+            "title": "樂透",
+            "content": "題目敘述\nDada878 要去買樂透，已知樂透有 $1$ ~ $n$ 共 $n$ 個數字可以選擇，且其中有 $m$ 個「幸運數字」只要選中就可以獲得高額的獎金，這裡總共有 $k$ 種購買方案，在第 $i$ 種購買方案你總共可以在樂透上選擇 $c_{i}$ 個連續的數字，而每種購買方案的價格都不盡相同，同個購買方案可購買多次或不購買並且不一定要按照順序購買，第 $i$ 種購買方案的價格用 $p_{i}$ 表示。透過一些特殊管道，Dada878 已經知道有哪些號碼會中獎，請你幫助 Dada878 用最少的金額拿到所有獎金。\n\n輸入說明\n第 $1$ 行包含三個整數分別是 $n$, $m$, $k$\n第 $2$ 行輸入 $k$ 個數字 $c_{1}$ ~ $c_{k}$ 表示每種購買方案可以選則幾個數字\n第 $3$ 行輸入 $k$ 個數字 $p_{1}$ ~ $p_{k}$ 表示每種購買方案的價格\n第 $4$ 行輸入 $m$ 個不重複的數字 $r_{1}$ ~ $r_{m}$ 表示每個確定會中獎的數字\n\n測資限制",
+            "tags": [
+                "出題",
+                "blog"
+            ],
+            "lastchangeAt": "2023-09-01T19:24:23.361Z",
+            "createdAt": "2023-04-11T07:26:09.312Z",
+            "tagsUpdatedAt": 1693596266892,
+            "titleUpdatedAt": 1687051819857,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "rkKqoYff2",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "IkjCl8UHSGSwoIHeVpn5Xg",
+            "title": "Test",
+            "content": "awa\nhehe",
+            "tags": [
+                "blog"
+            ],
+            "lastchangeAt": "2023-09-01T17:49:56.554Z",
+            "createdAt": "2023-09-01T17:47:09.898Z",
+            "tagsUpdatedAt": 1693590601090,
+            "titleUpdatedAt": 1693590433336,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "S1Ljmiy0n",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": null
+        },
+        {
+            "id": "rSNz0ahPQoWJJ23FlKVsxQ",
+            "title": "App inventer 專案",
+            "content": "Classroom\n功能\n班級\nAI 出題\n聊天功能\n公告\n功課\n通知\n\n防災軟體",
+            "tags": [],
+            "lastchangeAt": "2023-08-31T12:52:36.549Z",
+            "createdAt": "2023-08-31T12:30:29.029Z",
+            "tagsUpdatedAt": null,
+            "titleUpdatedAt": 1693485043305,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": "2023-08-31T13:04:09.711Z",
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "SyaJdbC62",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": null
+        },
+        {
+            "id": "iEgHmqDeQCi3TSn6CJY-aw",
+            "title": "競程動漫(?",
+            "content": "以全國高中生競程大賽冠軍為目標的清澄高中競程社以及temmie的故事\n我要用快速冪對你做指數型的壓縮\n我要用矩陣快速冪加上快速傅立葉變換對你做指數型的壓縮\ntemmie:你這王八烏龜，吃我的動態規劃\n\n我是那個一直 WA 跟 TLE 的人 然後 temmie 在我要受到心靈創傷的時候救了我，擊敗了元元，我繼續踏上成為紅黑人的這條路 然後要播十年以上，跟神奇X貝一樣，因為我太笨，要到紅黑可能要十年 (上吧！線段樹！線段樹：線段線段)\n~~演員：線段樹 / @[學測/競程廢物] 線段樹 ~~\ntemmie：我用 flow 把你沖走了，哈哈哈～ 想達到我 temmie 紅黑人的實力，你再去練個 100 年吧\ntemmie 大魔王：你完蛋了！！你就算做了 10 次 SOS DP 也沒人會來救你的\nhttps://www.ptt.cc/bbs/TKU_EE_92C/M.1477360815.A.46B.html",
+            "tags": [],
+            "lastchangeAt": "2023-08-14T15:59:49.697Z",
+            "createdAt": "2023-08-14T14:34:01.333Z",
+            "tagsUpdatedAt": null,
+            "titleUpdatedAt": 1692023668023,
+            "lastchangeuser": {
+                "name": "cheese_ge",
+                "userpath": "zelnnCHpSFKJbJzbqx-NnQ",
+                "photo": "https://avatars.githubusercontent.com/u/69394849?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": "2023-08-14T14:34:45.705Z",
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "S1Wws2vh3",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "HG0c_KwAQ9aAKnhgLtI6Gg",
+            "title": "",
+            "content": "定義\n$dp[i][tight][count]$ 在後綴 $i$ 位且非零整數數量為 $count$\n\n然後 $tight$ 表示是否碰到數字上界\n\n轉移\n$dp[i][0][k] = dp[i+1][0][k] + \\sum_{x = 1}^9dp[i+1][0][k-1]$\n$dp[i][1][k] = dp[i+1][0][k] + \\sum_{x = 1}^{d-1}dp[i+1][0][k-1]$\n\n$dp[i][1][k] = dp[i+1][1][k-1]$ if $d$ != 0",
+            "tags": [],
+            "lastchangeAt": "2023-08-03T02:40:32.710Z",
+            "createdAt": "2023-08-02T08:56:52.922Z",
+            "tagsUpdatedAt": null,
+            "titleUpdatedAt": 1691050367453,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "rJ689qPsh",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "XhLZbP7ITvGFe4yptP_Kdg",
+            "title": "SCINT Theme",
+            "content": ":::spoiler 目錄\n\n:::\n\n活動目的\n我們希望藉由邀請到在不同領域中擁有豐富經驗的講者，讓我們的論壇能夠成為一個豐富多元的知識交流平台。\n\n這些講者將以自身的經歷作為出發點，不僅僅將傳達枯燥的理論知識，更將透過故事和實例，帶領聽眾探索資訊領域的各種面貌。\n\n活動進行方式",
+            "tags": [
+                "主題"
+            ],
+            "lastchangeAt": "2023-07-11T15:15:44.054Z",
+            "createdAt": "2023-07-11T14:18:01.342Z",
+            "tagsUpdatedAt": 1689085195380,
+            "titleUpdatedAt": 1689085935824,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "HJbiVkiF3",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "QWogRjsSTUusIl7rOP4HyA",
+            "title": "Self study tracking",
+            "content": "4/11 Day.1\nTime table\n開始時間\n結束時間\n內容\n\n7:30\n13:30\n刷題目\n",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-05-11T16:37:39.299Z",
+            "createdAt": "2023-04-11T02:30:44.676Z",
+            "tagsUpdatedAt": 1687051733953,
+            "titleUpdatedAt": 1687051733977,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "Sk6ILBzGn",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "el5ZLq41RfanOaFaHwE1jQ",
+            "title": "Untitled",
+            "content": "SAIT 暑訓助教兼公關\nSCINT 行政兼技術組\nMINE TEAM 網頁開發組\nANAN 手機應用程式開發組\n旅行者們的休息小屋 網頁開發組",
+            "tags": [],
+            "lastchangeAt": "2023-05-07T15:57:38.829Z",
+            "createdAt": "2023-05-07T15:55:47.059Z",
+            "tagsUpdatedAt": null,
+            "titleUpdatedAt": 1687059387145,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "BJi-5HrE3",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "loSE4VtpTKOfL2EyL2GtxA",
+            "title": "筆記",
+            "content": "nth_element\n資奧聖經版中講義\n\n參與大學社團\n\n台大\n\n我是否沒有善用身邊的資源與所擁有的時間?\n\n對時間做紀錄",
+            "tags": [
+                "競程"
+            ],
+            "lastchangeAt": "2023-05-01T17:42:56.478Z",
+            "createdAt": "2023-04-15T07:59:34.972Z",
+            "tagsUpdatedAt": 1687053010312,
+            "titleUpdatedAt": 1687053010349,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "HyJutRwfh",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "1gQK7MDBTV24rKM7Noy51A",
+            "title": "升學相關資訊",
+            "content": "升學方式\n資安組\n資訊安全領域，類似特選\n\n特殊選材\nAPCS、競賽打好\n\nAPCS組\nAPCS納入成績計算，類似個人申請(普通)\n",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-05-01T17:23:31.221Z",
+            "createdAt": "2023-05-01T17:21:31.620Z",
+            "tagsUpdatedAt": 1687057481365,
+            "titleUpdatedAt": 1687057481386,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "r1NXSd67n",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "d7a8uW2QTWmYFNqXQxlOvA",
+            "title": "Pixel Game",
+            "content": "彈幕\n採集\n像素",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:17:47.957Z",
+            "createdAt": "2023-05-01T17:14:58.044Z",
+            "tagsUpdatedAt": 1687057480515,
+            "titleUpdatedAt": 1687057480538,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "BycqXuaXh",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "7yOSruCeSV-ViROGZDoJVA",
+            "title": "COOL Game",
+            "content": "有點像馬力歐版的貓咪大怪盜\n布置自己的地城讓其他玩家闖\n或者是俯視的\n\n貓咪大怪盜\n馬力歐\n陷阱\n2d",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:17:32.213Z",
+            "createdAt": "2023-05-01T17:15:17.922Z",
+            "tagsUpdatedAt": 1687057480608,
+            "titleUpdatedAt": 1687057480630,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "ryRi7uT72",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "DM2vjLKHQzaK0l-uFc6Qag",
+            "title": "Contest Editor",
+            "content": "Use vs code editor\nCP Editor testcase features\nlike Leetcode\nAPI for some popular Online Judge",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:14:39.184Z",
+            "createdAt": "2023-05-01T17:13:06.686Z",
+            "tagsUpdatedAt": 1687057480274,
+            "titleUpdatedAt": 1687057480300,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "ByiQmua72",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "FItjZEy3TYWf8sfbV2PdKA",
+            "title": "Shooting Game",
+            "content": "Introduction\n多人線上對戰(或雙人)\n回合制攻擊\n移動\n\n可以往八個角度射擊\n\n子彈\n\n散彈",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:12:48.135Z",
+            "createdAt": "2023-05-01T17:12:12.603Z",
+            "tagsUpdatedAt": 1687057480153,
+            "titleUpdatedAt": 1687057480177,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "HJHlmuaXh",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "bKBFEX7_TgyiCN5aCjcfEg",
+            "title": "Better Zero Judge",
+            "content": "Introduction\nA browser extension for Zero Judge website.\n\nFeatures\nBetter online editor\nBetter UI\nShow difficulty for problems (by user rated)\nBetter submit result show",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:11:36.039Z",
+            "createdAt": "2023-05-01T17:10:29.682Z",
+            "tagsUpdatedAt": 1687057479996,
+            "titleUpdatedAt": 1687057480019,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "B1CYfOa7h",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "CxiyHjKCTay_1WcCFNWcag",
+            "title": "ANAN Website",
+            "content": "ANAN氣墊鞋標語一雙好穿到 &quot;不可思議&quot; 的鞋墊\n輕 ∙ 軟 ∙ 好穿 ∙ 已屬必然\n柔軟舒適 僅僅只是 基本配備\n每一步行走您都將感受到 ANAN 滿滿的用心與誠意\n5 大功能 x 2大特色 x 0負擔\n瘦腿 / 塑腿 原來這麼簡單\n好穿已屬必然能真正解決您的腳部困擾才是我們最大的成就感\n顛覆傳統 -&gt; 穿鞋就能瘦 / 塑腿\n1/3 價格輕鬆入手 品質完勝各大品牌 好鞋需要您的支持\n",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T17:09:48.132Z",
+            "createdAt": "2023-05-01T17:09:16.137Z",
+            "tagsUpdatedAt": 1687057479742,
+            "titleUpdatedAt": 1687057479765,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "ryVSfO6Q3",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "akYLdrd1QUCAgfLmC4d4ZA",
+            "title": "English",
+            "content": "Articles\nButterfiles\nYou know butterfiles can&apos;t see the color of their wings\nbut as humans can see how beautiful they are.\nlike wise, you might not think you&apos;re good enough,\nbut others can see how special and amazing you are.\n\nFrom movies\nThe matrix\nYou&apos;re feeling a bit like Alice",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-05-01T17:07:02.300Z",
+            "createdAt": "2022-11-19T01:07:51.372Z",
+            "tagsUpdatedAt": 1687013404067,
+            "titleUpdatedAt": 1687013404105,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "By1uhor8s",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "1Ru_wZJsQAuRFkn8rVa1hQ",
+            "title": "Winter Planning",
+            "content": "解決 100 題 LeetCode\n完成 2 個 Study Plan\n補完 PCCA2022 課程\n完成 AP325 講義\n完成 Basic class\n完成 Advanced class\n學會並熟練基本資料結構Segment Tree\nHeap\nGraph\nBinary Search Tree",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-05-01T17:05:46.988Z",
+            "createdAt": "2022-10-30T07:57:59.576Z",
+            "tagsUpdatedAt": 1687006961830,
+            "titleUpdatedAt": 1687006961872,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "Bkg9RisVj",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "0Ogbqn3HQW6qetTm0yLnUw",
+            "title": "A plan for 2023 winter",
+            "content": "Very Inportant\n[ ] 完成所有  TOI 歷屆試題[x] 二元搜尋樹復原 (BST)\n[x] 螞蟻暗號 (Ants)\n[x] 數字遊戲 (Numbers)\n[ ] 岩石觀察\n[ ] 比對卡片\n[ ] 風景\n[x] 小畫家 (Painter)\n[x] 比大小 (Cards)\n[ ] 防守城堡 (Defense)",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-05-01T17:05:31.704Z",
+            "createdAt": "2023-01-20T06:24:02.780Z",
+            "tagsUpdatedAt": 1687028814891,
+            "titleUpdatedAt": 1687028814919,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "SyjKQnDjo",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "gXS3bwnmTL21mAT7PFmKbA",
+            "title": "Personal Website",
+            "content": "Pages Planning\nHomeLinksGithub\nIT home\n\nFeatures\n\nBlog\nProject\n\nProjects",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T16:56:27.889Z",
+            "createdAt": "2023-05-01T16:56:02.455Z",
+            "tagsUpdatedAt": 1687057478391,
+            "titleUpdatedAt": 1687057478414,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "HyqQyOT7h",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "Ygox4ypISL-8hAjJFOMm5A",
+            "title": "Online CP Editor",
+            "content": "還支援像是 VsCode 的側邊檔案瀏覽功能",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T16:53:31.758Z",
+            "createdAt": "2023-04-27T04:05:23.663Z",
+            "tagsUpdatedAt": 1687056376623,
+            "titleUpdatedAt": 1687056376642,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "S1nF4Ovm3",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "XpWvz95oSzWPr_cJP-eshQ",
+            "title": "Mine bot website",
+            "content": "概要\n深色主題風格\n多用動畫 (滾動動畫、按鈕hover的動畫等等)\nDiscord帳號登入機制 (好跟Mine Bot的API做溝通\n\n頁面規劃\n首頁Mine Bot 簡介\nMine Bot 的功能與特色\n伺服器/玩家數(api)\n導到其他介面的按鈕如瀏覽地圖/查看個人資料",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-05-01T16:53:10.604Z",
+            "createdAt": "2023-05-01T16:52:02.062Z",
+            "tagsUpdatedAt": 1687057477850,
+            "titleUpdatedAt": 1687057477873,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "Hy5ERvaQh",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "0sr6n0AeRAm53xsHrhvdDA",
+            "title": "競程筆記",
+            "content": "Sliding window\nTree\n\n$$f(n) = f(n-2)3 + 2(f(n-4)+f(n-6)+...)$$\n$$f(n-2) = f(n-4)3 + 2(f(n-6)+f(n-8)+...)$$\n$$f(n) = f(n-2)3 + f(n-2) + 2(f(n-4)+f(n-6)+...) - f(n-2)$$\n$$f(n) = f(n-2)4 + 2(f(n-4)+f(n-6)+...) - f(n-2)$$\n$$f(n) = f(n-2)4 + 2(f(n-4)+f(n-6)+...) - (f(n-4)3 + 2(f(n-6)+f(n-8)+...))$$\n$$f(n) = f(n-2)4 + 2(f(n-4)) - f(n-4)*3$$\n$$f(n) = f(n-2)*4 + f(n-4)$$",
+            "tags": [
+                "競程"
+            ],
+            "lastchangeAt": "2023-05-01T16:11:33.395Z",
+            "createdAt": "2023-04-29T09:52:44.191Z",
+            "tagsUpdatedAt": 1687057076614,
+            "titleUpdatedAt": 1687057076637,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "SyVgYDqX2",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "r-svmVgNR8OZlXaR4tMKxw",
+            "title": "SCINT BOT",
+            "content": "通知APCS\nTOI\n\nAwesome cp context",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-04-30T10:35:40.765Z",
+            "createdAt": "2023-04-30T10:34:30.829Z",
+            "tagsUpdatedAt": 1687057217232,
+            "titleUpdatedAt": 1687057217267,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "Bk1BNpoXn",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "H9VjOE0BSp2BROscYIMjnQ",
+            "title": "Time tracking review",
+            "content": "3/26 ~ 4/1\n\n利用通勤時間例如聽課程\n\n更準確的紀錄\n\n排除 Just resting 並寫出詳細休息內容\n\n睡覺時間\n",
+            "tags": [
+                "學習"
+            ],
+            "lastchangeAt": "2023-04-27T04:07:00.802Z",
+            "createdAt": "2023-04-04T20:12:55.676Z",
+            "tagsUpdatedAt": 1687050249255,
+            "titleUpdatedAt": 1687050249281,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "H1eRNWqb2",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "-l2z7zE4S8mX82AgiuqTqw",
+            "title": "神奇的廣告遊戲 [Hard]",
+            "content": "題目敘述\n這個禮拜已經是第 $87$ 次看到這個煩人的廣告了，雖然你已經盡可能的用全力保持理性，但腦袋被各種廣告精神汙染的你後最終還是失控了，手不自覺的點進去下載這個神奇的廣告遊戲。\n\n進入遊戲之後，你可以看到玩家在畫面的左下角，而右邊總共有 $k$ 個敵人，每個敵人和玩家頭上都有一個數字代表強度值，編號 $i$ 的敵人強度值使用 $e_i$ 表示，玩家的強度值使用 $p$ 表示。根據強度值，可以決定你殺的死的敵人，假設強度值為 $a$ 的玩家與強度值為 $b$ 的敵人戰鬥會有以下幾種情況：\n\n如果 $a-b = 0$ 的話玩家和敵人都會被對方殺死\n如果 $a-b &gt; 0$ 的話敵人將會被殺死，且玩家吸取敵人能量後 $a$ 值會改變為 $a * b$\n如果 $a-b &lt; 0$ 的話玩家將會被殺死\n\n你可以以任何順序攻打敵人，殺死編號 $i$ 的敵人可以獲得 $c_i$ 的得分，遊戲的目標就是殺死盡可能獲得更多分數，但玩家不能死亡，不過這樣塔太容易被攻破了，所以敵人首領還準備了 $m$ 個增援兵，在玩家總共殺死剛好 $a_i$ 個敵人時，敵人首領就會在再派出一位強度為 $s_i$ 的增援兵前往戰場支援，但殺死增援兵不會獲得任何分數。",
+            "tags": [
+                "出題"
+            ],
+            "lastchangeAt": "2023-04-27T03:40:54.541Z",
+            "createdAt": "2023-04-27T03:36:54.691Z",
+            "tagsUpdatedAt": 1687056356326,
+            "titleUpdatedAt": 1687056356348,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "rJJy0wwXn",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "0KQXlR3zSOKiTOlqADN7qA",
+            "title": "神奇的廣告遊戲",
+            "content": "題目敘述\n這個禮拜已經是第 $87$ 次看到這個煩人的廣告了，雖然你已經盡可能的用全力保持理性，但腦袋被各種廣告精神汙染的你後最終還是失控了，手不自覺的點進去下載這個神奇的廣告遊戲。\n\n進入遊戲之後，你可以看到玩家在畫面的左下角，而右邊總共有 $k$ 個敵人，每個敵人和玩家頭上都有一個數字代表強度值，編號 $i$ 的敵人強度值使用 $e_i$ 表示，玩家的強度值使用 $p$ 表示。根據強度值，可以決定你殺的死的敵人，假設強度值為 $a$ 的玩家與強度值為 $b$ 的敵人戰鬥會有以下幾種情況：\n\n如果 $a-b = 0$ 的話玩家和敵人都會被對方殺死\n如果 $a-b &gt; 0$ 的話敵人將會被殺死，且玩家吸取敵人能量後 $a$ 值會改變為 $a + b$\n如果 $a-b &lt; 0$ 的話玩家將會被殺死\n\n你可以以任何順序攻打敵人，遊戲的目標就是殺死盡可能更多的敵人，但玩家不能死亡，不過這樣塔太容易被攻破了，所以敵人首領還準備了 $m$ 個增援兵，在玩家總共殺死剛好 $a_i$ 個敵人時，敵人首領就會在再派出一位強度為 $s_i$ 的增援兵前往戰場支援。",
+            "tags": [
+                "出題"
+            ],
+            "lastchangeAt": "2023-04-27T02:40:53.696Z",
+            "createdAt": "2023-04-25T13:20:44.853Z",
+            "tagsUpdatedAt": 1687055863493,
+            "titleUpdatedAt": 1687055863517,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": "2023-04-27T01:27:17.547Z",
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "ryrnmLSmn",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "btkjX5AiQLm17oFCitUJ1A",
+            "title": "2048 Battle",
+            "content": "簡介\n市面上目前很少可以 PVP 的 2048 遊戲\n有幾款但看起來都很無聊\n原本 2048 玩法加上連機對戰功能\n\n機制\n每局消除一定的方塊時可以給予對方攻擊\n攻擊是會預先擺在敵方棋盤外面任意方向\n然後滑動時跟方塊一起進入區域\n不能直接消除",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-04-25T15:18:11.797Z",
+            "createdAt": "2023-04-23T17:18:38.856Z",
+            "tagsUpdatedAt": 1687055267382,
+            "titleUpdatedAt": 1687055267412,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "ByPOdym72",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "CO1zQOHxT-ia2KTinHGyRA",
+            "title": "Codeforces Bot",
+            "content": "Features\n每日任務\n會依照個人目前 rating 挑三個題目\n並且配予每個任務不同的 points\n\n每日簽到\n獲得一定的 ponits\n\n競賽任務\n參與 Codeforces 競賽獲得 points",
+            "tags": [
+                "專案"
+            ],
+            "lastchangeAt": "2023-04-25T15:15:06.833Z",
+            "createdAt": "2023-04-25T14:57:54.092Z",
+            "tagsUpdatedAt": 1687055899339,
+            "titleUpdatedAt": 1687055899364,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": "2023-04-29T16:19:36.759Z",
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "Hkq_cvBQn",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "b-LnN0buTCOivQd-aHIrsw",
+            "title": "PCCA 2022 Content",
+            "content": "競賽題解\nhttps://www.youtube.com/watch?v=JkDlsTVD5-g\nhttps://hackmd.io/@qwe854896/BkSMg4MAF\n\n課程講義/簡報\nhttps://hackmd.io/@tonychi/rye6XcL6K\nhttps://hackmd.io/@NCTUcies96035/H127M0I6F\nhttps://docs.google.com/presentation/d/1Mtz439BHreeaDTxZIrx_Ox1FOJ8eWJy7czw8NzmJW00/edit#slide=id.g10f9e405fa2_1_80\nDeducting Weights  http://codepad.org/wIxPPLH0\nDrug Dealer http://codepad.org/IKoRRujs",
+            "tags": [
+                "競程"
+            ],
+            "lastchangeAt": "2023-04-25T13:29:04.157Z",
+            "createdAt": "2022-12-25T09:58:03.372Z",
+            "tagsUpdatedAt": 1687022733172,
+            "titleUpdatedAt": 1687022733203,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "H1m2CcHKo",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "MUzIEXuKTMq3owwhgSM2uA",
+            "title": "APCS",
+            "content": "歷次級分\n日期\n10/23\n\n觀念\n2\n\n實作\n3\n",
+            "tags": [
+                "競程"
+            ],
+            "lastchangeAt": "2023-04-25T13:28:06.967Z",
+            "createdAt": "2022-10-24T14:42:35.497Z",
+            "tagsUpdatedAt": 1687005249660,
+            "titleUpdatedAt": 1687005249691,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "BJ7vEmNVj",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        },
+        {
+            "id": "E2IHng7gQ3Wr0te1jyre8g",
+            "title": "升學相關",
+            "content": "升學方式\n資安組\n資訊安全領域，類似特選\n\n特殊選材\nAPCS、競賽打好\n\nAPCS組\nAPCS納入成績計算，類似個人申請(普通)\n",
+            "tags": [
+                "競程"
+            ],
+            "lastchangeAt": "2023-04-23T17:29:48.909Z",
+            "createdAt": "2022-10-15T13:55:17.955Z",
+            "tagsUpdatedAt": 1687002654839,
+            "titleUpdatedAt": 1687002654870,
+            "lastchangeuser": {
+                "name": "Dada878",
+                "userpath": "dada878",
+                "photo": "https://avatars.githubusercontent.com/u/37009584?s=96",
+                "biography": null
+            },
+            "isOwner": true,
+            "isVisited": true,
+            "publishType": "view",
+            "publishedAt": null,
+            "userpath": "dada878",
+            "teampath": null,
+            "permalink": null,
+            "shortId": "HyApoEdmj",
+            "bookmarked": false,
+            "liked": false,
+            "likedCount": 0,
+            "commentCount": 0
+        }
+    ]
+}
