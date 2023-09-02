@@ -13,7 +13,7 @@ fi
 response=$(curl -s 'https://api.github.com/repos/dada878/blog/git/trees/master')
 
 # 解析JSON響應
-tree=$(echo "$response" | jq -r '.tree[]')
+tree=$("$JQ_PATH" -r '.tree[]' <<< "$response")
 
 # 初始化空白博客列表
 blogList=()
@@ -39,4 +39,4 @@ for item in $tree; do
 done
 
 # 將博客列表轉換為JSON格式並寫入blogs.json文件
-echo "[${blogList[*]}]" | jq '.' > ./blogs.json
+echo "[${blogList[*]}]" | "$JQ_PATH" '.' > ./blogs.json
