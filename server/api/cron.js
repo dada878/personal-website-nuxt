@@ -1,20 +1,31 @@
-import { exec } from "child_process"; // Import the promisified version of exec
+import util from "util";
+import { exec } from "child_process";
+import { createResponse } from "@vercel/node";
+
+const execPromise = util.promisify(exec);
 
 async function run(command) {
-  const { stdout, stderr } = await exec(command);
-  console.log("stdout:", stdout);
-  console.log("stderr:", stderr);
+  try {
+    const { stdout, stderr } = await execPromise(command);
+    console.log("stdout:", stdout);
+    console.log("stderr:", stderr);
+    return { stdout, stderr };
+  } catch (error) {
+    console.error("Error:", error);
+    return { error: error.message };
+  }
 }
 
-async function myHandler(event, context) {
-  const response = {
-    statusCode: 200,
-    body: "Hello Cron!",
-  };
-
-  await run("npm run build");
-
-  return response;
-}
-
-export const handler = fromNodeMiddleware(myHandler);
+export default async (req, res) => {
+  try {
+    const result = await run("npm run build");
+    const response = createResponse(req, res);
+    
+    response.status(200).send(JSON.stringify(result));
+  } catch (error) {
+    console.error("Error:", error);
+    const response = createResponse(req, res);
+    
+    response.status(500).send(JSON.stringify({ error: "Internal Server Error" }));
+  }
+};
