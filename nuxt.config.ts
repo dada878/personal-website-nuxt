@@ -15,7 +15,23 @@ export default defineNuxtConfig({
     "@fortawesome/free-brands-svg-icons",
     ],
   },
+  modules: [
+    'nuxt-simple-sitemap'
+  ],
+  site: {
+    url: 'https://dada878.tk',
+  },
+  sitemap: {
+    urls: async () => {
+      return blogs.map(page => ({
+        loc: `/blog/${page.id}`,
+        lastmod: Date().toString(),
+        changefreq: 'daily',
+        priority: 0.8,
+      }))
+    },
+  },
   generate: {
     routes: blogs.map((item) => `/blogs/${item.id}`),
-  },
+  }
 });
