@@ -13,38 +13,34 @@ const router = useRouter();
 const title = ref("");
 const content = ref("");
 
-useProjectList().then((blogData) => {
-  const blog = blogData.find(
-    (item) => item.id === router.currentRoute.value.params.id
-  );
-  useHead({
-    title: blog!.title,
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: blog!.content.replaceAll("/n", " "),
-      },
-      {
-        property: "og:title",
-        content: blog!.title,
-      },
-      {
-        property: "og:description",
-        content: blog!.content.replaceAll("/n", " "),
-      },
-    ],
-  });
+const blog = useProjectList().find(
+  (item) => item.id === router.currentRoute.value.params.id
+);
+useHead({
+  title: blog!.title,
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: blog!.content.replaceAll("/n", " "),
+    },
+    {
+      property: "og:title",
+      content: blog!.title,
+    },
+    {
+      property: "og:description",
+      content: blog!.content.replaceAll("/n", " "),
+    },
+  ],
 });
 
 onMounted(() => {
-  useProjectList().then((res) => {
-    const blog = res.find(
-      (item) => item.id === router.currentRoute.value.params.id
-    );
-    title.value = blog!.title;
-    content.value = blog!.content;
-  });
+  const blog = useProjectList().find(
+    (item) => item.id === router.currentRoute.value.params.id
+  );
+  title.value = blog!.title;
+  content.value = blog!.content;
 });
 
 onUpdated(() => {

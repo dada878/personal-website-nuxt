@@ -3,6 +3,9 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
   push:
     branches:
       - master
