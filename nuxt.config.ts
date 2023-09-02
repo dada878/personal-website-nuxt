@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import blogs from "./content/blogs.json";
+import blogs from "./public/content/blogs.json";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
