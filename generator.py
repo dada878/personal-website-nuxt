@@ -1,9 +1,6 @@
-import os
 import json
 import urllib.request
-
-# 使用urllib下載requests
-os.system("pip install requests")
+import urllib.parse  # Import urllib.parse for URL encoding
 
 url = 'https://api.github.com/repos/dada878/blog/git/trees/master?recursive=3'
 response = urllib.request.urlopen(url)
@@ -16,7 +13,8 @@ for item in data['tree']:
     path = item['path']
     
     if path.endswith('.md'):
-        content_url = "https://raw.githubusercontent.com/dada878/blog/master/" + path
+        # Encode the URL
+        content_url = urllib.parse.quote("https://raw.githubusercontent.com/dada878/blog/master/" + path, safe=':/')
         content_response = urllib.request.urlopen(content_url)
         content = content_response.read().decode('utf-8')
         
@@ -38,6 +36,7 @@ for item in data['tree']:
             
         elif path.startswith('blogs/'):
             blogList.append(page_data)
+
 
 with open('./content/blogs.json', 'w', encoding="UTF8") as f:
     json.dump(blogList, f, indent=4, ensure_ascii=False)
