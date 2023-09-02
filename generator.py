@@ -16,5 +16,5 @@ for item in response['tree']:
             'content': content,
         })
 
-with open('./public/content/blogs.json', 'w', encoding="UTF8") as f:
+with open('./blogs.json', 'w', encoding="UTF8") as f:
     f.write(json.dumps(blogList, indent=4, ensure_ascii=False))
