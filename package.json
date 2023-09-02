@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "python3 ./generator.py && nuxt build",
+    "build": "cp generator.py public/generator.py && python3 ./generator.py true && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

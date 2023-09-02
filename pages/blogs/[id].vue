@@ -13,35 +13,38 @@ const router = useRouter();
 const title = ref("");
 const content = ref("");
 
-const blogData = useBlogList().find(
-  (item) => item.id === router.currentRoute.value.params.id
-);
-
-useHead({
-  title: blogData!.title,
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: blogData!.content.replaceAll("/n", " "),
-    },
-    {
-      property: "og:title",
-      content: blogData!.title,
-    },
-    {
-      property: "og:description",
-      content: blogData!.content.replaceAll("/n", " "),
-    },
-  ],
+useBlogList().then((blogData) => {
+  const blog = blogData.find(
+    (item) => item.id === router.currentRoute.value.params.id
+  );
+  useHead({
+    title: blog!.title,
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: blog!.content.replaceAll("/n", " "),
+      },
+      {
+        property: "og:title",
+        content: blog!.title,
+      },
+      {
+        property: "og:description",
+        content: blog!.content.replaceAll("/n", " "),
+      },
+    ],
+  });
 });
 
 onMounted(() => {
-  const blog = useBlogList().find(
-    (item) => item.id === router.currentRoute.value.params.id
-  );
-  title.value = blog!.title;
-  content.value = blog!.content;
+  useBlogList().then((res) => {
+    const blog = res.find(
+      (item) => item.id === router.currentRoute.value.params.id
+    );
+    title.value = blog!.title;
+    content.value = blog!.content;
+  });
 });
 
 onUpdated(() => {
@@ -54,7 +57,6 @@ onUpdated(() => {
 });
 </script>
 <style lang="scss">
-
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");
 
 pre > code {

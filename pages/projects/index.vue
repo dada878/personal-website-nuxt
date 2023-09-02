@@ -72,8 +72,8 @@ interface Post {
 
 const projectList: Ref<Array<Post>> = ref([]);
 
-onMounted(() => {
-  projectList.value = useProjectList();
+useProjectList().then((res) => {
+  projectList.value = res;
 });
 
 const router = useRouter();
