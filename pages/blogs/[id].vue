@@ -33,6 +33,14 @@ onUpdated(() => {
 });
 </script>
 <style lang="scss">
+@import url("https://fonts.cdnfonts.com/css/cascadia-code");
+pre > code {
+  border-radius: 0.5rem;
+  * {
+    font-family: "Cascadia Code", sans-serif;
+    tab-size: 4;
+  }
+}
 .blog-post {
   text-align: left;
   margin-left: 20%;
@@ -46,6 +54,13 @@ onUpdated(() => {
     #markdown {
         img {
             max-width: 100%;
+        }
+        a {
+            color: rgb(125, 205, 211);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
   }
