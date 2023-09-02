@@ -1,5 +1,5 @@
-const exec = util.promisify(require("child_process").exec);
 const util = require("util");
+const exec = util.promisify(require("child_process").exec);
 
 async function run(command) {
   const { stdout, stderr } = await exec(command);
