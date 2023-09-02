@@ -17,7 +17,7 @@ for item in data['tree']:
     # 检查文件是否以 .md 结尾
     if path.endswith('.md'):
         # 发送 GET 请求获取 Markdown 文件的内容
-        content_url = f'https://raw.githubusercontent.com/dada878/blog/master/{path}'
+        content_url = "https://raw.githubusercontent.com/dada878/blog/master/" + path
         content_response = urllib.request.urlopen(content_url)
         content = content_response.read().decode()
         
