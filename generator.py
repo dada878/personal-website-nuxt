@@ -1,4 +1,6 @@
 import os
+os.system('python -m venv myenv')
+os.system('source myenv/bin/activate')
 os.system('pip install requests')
 import requests
 import json
