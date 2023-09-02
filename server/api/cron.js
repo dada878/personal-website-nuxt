@@ -1,5 +1,5 @@
 import util from "util";
-import { exec } from "child_process/promises"; // Import the promisified version of exec
+import { exec } from "child_process"; // Import the promisified version of exec
 
 async function run(command) {
   const { stdout, stderr } = await exec(command);
