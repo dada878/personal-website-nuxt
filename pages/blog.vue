@@ -14,7 +14,6 @@
   </div>
 </template>
 <style lang="scss">
-// @import '../../../node_modules/highlight.js/styles/nord.css';
 .blog {
   margin-top: 3rem;
   padding: 2rem calc(20vw + 1rem);

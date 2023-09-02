@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import blogs from './blogs.json';
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
@@ -12,5 +14,8 @@ export default defineNuxtConfig({
     "@fortawesome/pro-regular-svg-icons",
     "@fortawesome/free-brands-svg-icons",
     ],
+  },
+  generate: {
+    routes: blogs.map((item) => `/blogs/${item.id}`),
   }
 });

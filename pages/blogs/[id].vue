@@ -8,10 +8,23 @@
 <script lang="ts" setup>
 import hljs from "highlight.js";
 import "highlight.js/styles/nord.css";
+import blogs from '@/blogs.json';
 
 const router = useRouter();
 const title = ref("");
 const content = ref("");
+
+const blogData = blogs.find((item) => item.id === router.currentRoute.value.params.id);
+useHead({
+    title: blogData!.title,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: blogData!.content
+      }
+    ]
+});
 
 onMounted(() => {
   useBlogList().then((res) => {
