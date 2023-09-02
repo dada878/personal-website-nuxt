@@ -70,9 +70,7 @@ interface Post {
 const blogList: Ref<Array<Post>> = ref([]);
 
 onMounted(() => {
-  useBlogList().then((res) => {
-    blogList.value = res;
-  });
+    blogList.value = useBlogList();
 });
 
 const router = useRouter();
