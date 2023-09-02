@@ -19,7 +19,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@nuxtjs/sitemap": "^2.4.0",
     "@types/markdown-it": "^13.0.1",
     "highlight.js": "^11.8.0",
     "markdown-it": "^13.0.1"
