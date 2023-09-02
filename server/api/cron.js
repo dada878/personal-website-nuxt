@@ -1,4 +1,3 @@
-import util from "util";
 import { exec } from "child_process"; // Import the promisified version of exec
 
 async function run(command) {
@@ -7,7 +6,15 @@ async function run(command) {
   console.log("stderr:", stderr);
 }
 
-export default async function handler(req, res) {
-  res.end("Hello Cron!");
-  await run("npm run build"); // Make sure to await the run function since it's asynchronous
+async function myHandler(event, context) {
+  const response = {
+    statusCode: 200,
+    body: "Hello Cron!",
+  };
+
+  await run("npm run build");
+
+  return response;
 }
+
+export const handler = fromNodeMiddleware(myHandler);
