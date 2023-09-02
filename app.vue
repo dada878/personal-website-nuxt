@@ -11,12 +11,17 @@ import PageNavbar from "./components/PageNavbar.vue";
 
 <style lang="scss">
 
-* {
-  font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
-}
-
 .router {
   margin-top: 3rem;
+}
+
+.page-container {
+  margin-top: 3rem;
+  padding: 2rem calc(20vw + 1rem);
+  font-size: calc(0.8rem + 0.2vw);
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
 }
 
 html,
@@ -27,7 +32,7 @@ body,
   overflow-x: hidden;
   background-color: #47525e;
   overflow-y: overlay;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
