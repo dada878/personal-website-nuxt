@@ -8,7 +8,7 @@ response = json.loads(response.text)
 blogList = []
 for item in response['tree']:
     if item['path'].endswith('.md'):
-        content = requests.get(f'https://raw.githubusercontent.com/dada878/blog/master/{item["path"]}').text
+        content = requests.get("https://raw.githubusercontent.com/dada878/blog/master/" + item['path']).text
         title = content.split('\n')[0].replace('# ', '')
         blogList.append({
             'id': item['path'].replace('.md', ''),
