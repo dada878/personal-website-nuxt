@@ -72,7 +72,7 @@ pre > code {
   min-height: 100vh;
   .content {
     padding: 3rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 3rem;
     #markdown {
       img {
