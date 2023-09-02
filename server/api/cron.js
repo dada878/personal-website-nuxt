@@ -1,5 +1,5 @@
-const util = require("util");
-const exec = util.promisify(require("child_process").exec);
+import util from "util";
+import { exec } from "child_process/promises"; // Import the promisified version of exec
 
 async function run(command) {
   const { stdout, stderr } = await exec(command);
@@ -7,7 +7,7 @@ async function run(command) {
   console.log("stderr:", stderr);
 }
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   res.end("Hello Cron!");
-  run("npm run build");
+  await run("npm run build"); // Make sure to await the run function since it's asynchronous
 }
