@@ -4,11 +4,11 @@
             <li>
                 <nuxt-link to="/">首頁</nuxt-link>
             </li>
-            <!-- <li>
-                <nuxt-link to="/projects">作品集</nuxt-link>
-            </li> -->
             <li>
-                <nuxt-link to="/blog">部落格</nuxt-link>
+                <nuxt-link to="/blogs">部落格</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/projects">作品集</nuxt-link>
             </li>
         </ul>
     </nav>
@@ -20,7 +20,8 @@
     top: 0%;
     left: 0%;
     right: 0%;
-    background-color: rgba(184, 184, 184, 0.205);
+    background-color: #5f6771ad;
+    box-shadow: 0px 0px 5px 0px #0000003d;
     backdrop-filter: blur(0.5rem);
     z-index: 5;
     &>ul {
