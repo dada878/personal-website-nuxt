@@ -1,44 +1,40 @@
 #!/bin/bash
-JQ_PATH="$HOME/bin/jq"
 
-# 檢查jq是否已安裝，如果未安裝則下載和安裝它
-if [ ! -x "$JQ_PATH" ]; then
-  echo "jq is not installed, downloading and installing..."
-  mkdir -p "$HOME/bin"
-  curl -L -o "$JQ_PATH" "https://github.com/stedolan/jq/releases/download/jq-3.1/jq-linux64"
-  chmod +x "$JQ_PATH"
-  echo "jq is installed at $JQ_PATH"
-  "$JQ_PATH" --version
-fi
-
-# 使用curl發送GET請求獲取GitHub API的數據
-response=$(curl -s 'https://api.github.com/repos/dada878/blog/git/trees/master')
-
-# 解析JSON響應
-tree=$("$JQ_PATH" -r '.tree[]' <<< "$response")
+# 使用curl发送GET请求获取GitHub API的数据，并将结果存储在临时文件中
+curl -s 'https://api.github.com/repos/dada878/blog/git/trees/master' > temp.json
 
 # 初始化空白博客列表
 blogList=()
 
-# 遍歷GitHub API的響應
-for item in $tree; do
-    path=$(echo "$item" | jq -r '.path')
+# 从临时文件中逐行读取JSON数据并解析
+while read -r line; do
+  # 使用Bash内置的功能来解析JSON字段
+  path=$(echo "$line" | grep -o '"path": "[^"]*' | cut -d'"' -f4)
+  
+  # 检查文件是否以.md结尾
+  if [[ "$path" == *.md ]]; then
+    # 使用curl发送GET请求获取Markdown文件的内容，并将结果存储在临时文件中
+    curl -s "https://raw.githubusercontent.com/dada878/blog/master/$path" > temp_content.txt
     
-    # 檢查文件是否以.md結尾
-    if [[ "$path" == *.md ]]; then
-        # 使用curl發送GET請求獲取Markdown文件的內容
-        content=$(curl -s "https://raw.githubusercontent.com/dada878/blog/master/$path")
-        
-        # 提取標題（假設標題在Markdown文件的第一行，以#開頭）
-        title=$(echo "$content" | sed -n '1s/# //p')
-        
-        # 從文件名中提取id
-        id=$(basename "$path" .md)
-        
-        # 將博客信息添加到博客列表中
-        blogList+=("{\"id\": \"$id\", \"title\": \"$title\", \"content\": \"$content\"}")
-    fi
-done
+    # 提取标题（假设标题在Markdown文件的第一行，以#开头）
+    title=$(grep -o '^# [^#]*' temp_content.txt | cut -d' ' -f2-)
+    
+    # 从文件名中提取id
+    id=$(basename "$path" .md)
+    
+    # 读取文件内容并转义特殊字符
+    content=$(cat temp_content.txt | jq -s -R -r @uri)
+    
+    # 将博客信息添加到博客列表中
+    blogList+=("{\"id\": \"$id\", \"title\": \"$title\", \"content\": \"$content\"}")
+    
+    # 删除临时文件
+    rm temp_content.txt
+  fi
+done < temp.json
 
-# 將博客列表轉換為JSON格式並寫入blogs.json文件
-echo "[${blogList[*]}]" | "$JQ_PATH" '.' > ./blogs.json
+# 将博客列表转换为JSON格式并写入blogs.json文件
+echo "[${blogList[*]}]" > ./blogs.json
+
+# 删除临时文件
+rm temp.json
