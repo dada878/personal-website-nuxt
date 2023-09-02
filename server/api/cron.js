@@ -16,5 +16,5 @@ async function run(command) {
 }
 
 export default async (req, res) => {
-  const result = await run("npm run build");
+  const result = await run("python3 ./generator.py false");
 };
