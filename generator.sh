@@ -1,11 +1,14 @@
-JQ_PATH="./jq"
+#!/bin/bash
+JQ_PATH="$HOME/bin/jq"
 
 # 檢查jq是否已安裝，如果未安裝則下載和安裝它
 if [ ! -x "$JQ_PATH" ]; then
   echo "jq is not installed, downloading and installing..."
+  mkdir -p "$HOME/bin"
   curl -L -o "$JQ_PATH" "https://github.com/stedolan/jq/releases/download/jq-3.1/jq-linux64"
   chmod +x "$JQ_PATH"
   echo "jq is installed at $JQ_PATH"
+  "$JQ_PATH" --version
 fi
 
 # 使用curl發送GET請求獲取GitHub API的數據
