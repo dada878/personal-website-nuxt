@@ -73,7 +73,7 @@ pre > code {
   color: #e0e2e9cb;
   .content {
     padding: 3rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
     padding-bottom: 3rem;
     #markdown {
       img {

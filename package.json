@@ -11,6 +11,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.0",
+    "nuxt-simple-robots": "^3.1.2",
     "nuxt-simple-sitemap": "^3.2.6",
     "sass": "^1.66.1"
   },
@@ -22,6 +23,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@types/markdown-it": "^13.0.1",
     "highlight.js": "^11.8.0",
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^13.0.1",
+    "markdown-it-mathjax3": "^4.3.2"
   }
 }
