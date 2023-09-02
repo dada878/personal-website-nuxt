@@ -15,7 +15,10 @@ export default defineNuxtConfig({
     "@fortawesome/free-brands-svg-icons",
     ],
   },
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
   generate: {
     routes: blogs.map((item) => `/blogs/${item.id}`),
-  }
+  },
 });

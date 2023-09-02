@@ -8,22 +8,33 @@
 <script lang="ts" setup>
 import hljs from "highlight.js";
 import "highlight.js/styles/nord.css";
-import blogs from '@/blogs.json';
+import blogs from "@/blogs.json";
 
 const router = useRouter();
 const title = ref("");
 const content = ref("");
 
-const blogData = blogs.find((item) => item.id === router.currentRoute.value.params.id);
+const blogData = blogs.find(
+  (item) => item.id === router.currentRoute.value.params.id
+);
+
 useHead({
-    title: blogData!.title,
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: blogData!.content
-      }
-    ]
+  title: blogData!.title,
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: blogData!.content.replaceAll("/n", " "),
+    },
+    {
+      property: "og:title",
+      content: blogData!.title,
+    },
+    {
+      property: "og:description",
+      content: blogData!.content.replaceAll("/n", " "),
+    }
+  ],
 });
 
 onMounted(() => {
@@ -65,16 +76,16 @@ pre > code {
     padding-top: 3rem;
     padding-bottom: 3rem;
     #markdown {
-        img {
-            max-width: 100%;
-        }
-        a {
-            color: rgb(125, 205, 211);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+      img {
+        max-width: 100%;
+      }
+      a {
+        color: rgb(125, 205, 211);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
