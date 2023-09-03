@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
+import projects from "./content/projects.json";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -28,6 +29,9 @@ export default defineNuxtConfig({
     },
   },
   generate: {
-    routes: blogs.map((item) => `/blogs/${item.id}`),
+    routes: [
+      ...blogs.map((item) => `/blogs/${item.id}`),
+      ...projects.map((item) => `/projects/${item.id}`),
+    ],
   },
 });
