@@ -1,7 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="content">
-      <div id="markdown" v-html="$mdRenderer.render(content)"></div>
+      <div id="markdown" v-html="renderedContent"></div>
     </div>
   </div>
 </template>
@@ -36,22 +36,27 @@ useHead({
   ],
 });
 
+title.value = blog!.title;
+content.value = blog!.content;
+
+import md from "markdown-it";
+import mathjax from "markdown-it-mathjax3";
+
+const renderer = md({
+  html: true,
+  linkify: true,
+  typographer: true
+}).use(mathjax);
+
+const renderedContent = ref(renderer.render(content.value));
+
 onMounted(() => {
-  const blog = useBlogList().find(
-    (item) => item.id === router.currentRoute.value.params.id
-  );
-  title.value = blog!.title;
-  content.value = blog!.content;
+  hljs.configure({ ignoreUnescapedHTML: true });
+  for (const block of document.querySelectorAll("code")) {
+    hljs.highlightElement(block);
+  }
 });
 
-onUpdated(() => {
-  hljs.configure({ ignoreUnescapedHTML: true });
-  setTimeout(() => {
-    for (const block of document.querySelectorAll("code")) {
-      hljs.highlightElement(block);
-    }
-  }, 100);
-});
 </script>
 <style lang="scss">
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");

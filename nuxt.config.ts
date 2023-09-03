@@ -30,6 +30,8 @@ export default defineNuxtConfig({
   },
   generate: {
     routes: [
+      "/blogs",
+      "/projects",
       ...blogs.map((item) => `/blogs/${item.id}`),
       ...projects.map((item) => `/projects/${item.id}`),
     ],
