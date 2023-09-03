@@ -1,7 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="content">
-      <div id="markdown" v-html="$mdRenderer.render(content)"></div>
+      <div id="markdown" v-html="renderedContent"></div>
     </div>
   </div>
 </template>
@@ -16,6 +16,7 @@ const content = ref("");
 const blog = useProjectList().find(
   (item) => item.id === router.currentRoute.value.params.id
 );
+
 useHead({
   title: blog!.title,
   meta: [
@@ -35,21 +36,25 @@ useHead({
   ],
 });
 
-onMounted(() => {
-  const blog = useProjectList().find(
-    (item) => item.id === router.currentRoute.value.params.id
-  );
-  title.value = blog!.title;
-  content.value = blog!.content;
-});
+title.value = blog!.title;
+content.value = blog!.content;
+
+import md from "markdown-it";
+import mathjax from "markdown-it-mathjax3";
+
+const renderer = md({
+  html: true,
+  linkify: true,
+  typographer: true
+}).use(mathjax);
+
+const renderedContent = ref(renderer.render(content.value));
 
 onUpdated(() => {
   hljs.configure({ ignoreUnescapedHTML: true });
-  setTimeout(() => {
-    for (const block of document.querySelectorAll("code")) {
-      hljs.highlightElement(block);
-    }
-  }, 100);
+  for (const block of document.querySelectorAll("code")) {
+    hljs.highlightElement(block);
+  }
 });
 </script>
 <style lang="scss">
