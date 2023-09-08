@@ -1,5 +1,8 @@
-import projects from '@/content/projects.json';
+import projects from "@/content/projects.json";
 
 export const useProjectList = () => {
-  return projects;
+  return projects.map((item) => ({
+    ...item,
+    category: item.category ?? "未分類",
+  }));
 };

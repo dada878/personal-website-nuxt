@@ -71,7 +71,7 @@ interface Post {
 }
 
 useHead({
-  title: "作品集 - 冰川的個人網站",
+  title: "作品集 | 冰川的個人網站",
   htmlAttrs: { lang: 'zh-tw' },
   meta: [
     {
@@ -81,7 +81,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: "作品集 - 冰川的個人網站",
+      content: "作品集 | 冰川的個人網站",
     },
     {
       property: "og:description",

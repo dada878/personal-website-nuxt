@@ -59,9 +59,10 @@
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+library.add(faTag);
 
 useHead({
-  title: "部落格 - 冰川的個人網站",
+  title: "部落格 | 冰川的個人網站",
   htmlAttrs: { lang: 'zh-tw' },
   meta: [
     {
@@ -71,7 +72,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: "部落格 - 冰川的個人網站",
+      content: "部落格 | 冰川的個人網站",
     },
     {
       property: "og:description",
@@ -88,7 +89,6 @@ useHead({
   ],
 });
 
-library.add(faTag);
 interface Post {
   id: string;
   title: string;
