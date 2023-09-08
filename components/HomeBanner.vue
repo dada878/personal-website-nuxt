@@ -28,7 +28,7 @@ library.add(faGithub, faDiscord, faEnvelope);
 <style scoped lang="scss">
 .banner {
   background-image: linear-gradient(60deg, #29323c 0%, #415366 100%);
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
