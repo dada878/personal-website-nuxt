@@ -18,7 +18,7 @@ const blog = useBlogList().find(
 );
 
 useHead({
-  title: blog!.title + " - 冰川的個人網站",
+  title: blog!.title + " | 冰川的個人網站",
   htmlAttrs: { lang: 'zh-tw' },
   meta: [
     {
@@ -28,7 +28,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: blog!.title + " - 冰川的個人網站",
+      content: blog!.title + " | 冰川的個人網站",
     },
     {
       property: "og:description",

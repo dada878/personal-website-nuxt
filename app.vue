@@ -19,6 +19,10 @@
   }
 }
 
+* {
+  box-sizing: inherit;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
