@@ -70,6 +70,34 @@ interface Post {
   category: string | null;
 }
 
+useHead({
+  title: "作品集 - 冰川的個人網站",
+  htmlAttrs: { lang: 'zh-tw' },
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: "這裡就是我的作品集囉！看看有沒有什麼很酷的東西吧！",
+    },
+    {
+      property: "og:title",
+      content: "作品集 - 冰川的個人網站",
+    },
+    {
+      property: "og:description",
+      content: "這裡就是我的作品集囉！看看有沒有什麼很酷的東西吧！",
+    },
+    {
+      property: "og:url",
+      content: "https://dada878.tk/projects",
+    },
+    {
+      property: "og:image",
+      content: "https://dada878.tk/logo.png",
+    },
+  ],
+});
+
 const projectList: Ref<Array<Post>> = ref([]);
 
 projectList.value = useProjectList();

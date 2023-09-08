@@ -59,6 +59,35 @@
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+
+useHead({
+  title: "部落格 - 冰川的個人網站",
+  htmlAttrs: { lang: 'zh-tw' },
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: "你可以在這裡找到我的部落格文章 ><",
+    },
+    {
+      property: "og:title",
+      content: "部落格 - 冰川的個人網站",
+    },
+    {
+      property: "og:description",
+      content: "你可以在這裡找到我的部落格文章 ><",
+    },
+    {
+      property: "og:url",
+      content: "https://dada878.tk/blogs",
+    },
+    {
+      property: "og:image",
+      content: "https://dada878.tk/logo.png",
+    },
+  ],
+});
+
 library.add(faTag);
 interface Post {
   id: string;
