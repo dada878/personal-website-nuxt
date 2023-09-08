@@ -100,7 +100,7 @@ pre > code {
   }
   .content {
     padding: 3rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 3rem;
     @media (max-width: 768px) {
       padding: 1.5rem;

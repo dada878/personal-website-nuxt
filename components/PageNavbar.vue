@@ -16,10 +16,10 @@
 
 <style lang="scss">
 .navbar {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    right: 0%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: #5f6771ad;
     box-shadow: 0px 0px 5px 0px #0000003d;
     backdrop-filter: blur(0.5rem);

@@ -8,10 +8,10 @@
       <a target="_blank" href="https://github.com/dada878">
         <font-awesome-icon icon="fa-brands fa-github" />
       </a>
-      <a target="_blank" href="https://google.com">
+      <a target="_blank" href="https://discordapp.com/users/611118369474740244/">
         <font-awesome-icon icon="fa-brands fa-discord" />
       </a>
-      <a target="_blank" href="https://google.com">
+      <a target="_blank" href="mailto:xx0932399@gmail.com">
         <font-awesome-icon icon="fa-solid fa-envelope" />
       </a>
     </div>
