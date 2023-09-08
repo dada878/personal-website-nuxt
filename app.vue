@@ -2,21 +2,16 @@
   <div>
     <PageNavbar></PageNavbar>
     <router-view :class="{ router: $route.path !== '/' }" />
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script setup lang="ts">
-import PageNavbar from "./components/PageNavbar.vue";
 </script>
 
 <style lang="scss">
 
-.router {
-  margin-top: 3rem;
-}
-
 .page-container {
-  margin-top: 3rem;
   padding: 2rem calc(20vw + 1rem);
   font-size: calc(0.8rem + 0.2vw);
   @media (max-width: 768px) {
@@ -24,9 +19,8 @@ import PageNavbar from "./components/PageNavbar.vue";
   }
 }
 
-html,
-body,
-#app {
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -37,6 +31,9 @@ body,
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #e0e2e9;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3rem;
 }
 
 ::-webkit-scrollbar {

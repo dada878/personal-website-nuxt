@@ -99,10 +99,18 @@ pre > code {
   background-color: #364049b0;
   color: #e0e2e9cb;
   min-height: 100vh;
+  @media (max-width: 768px) {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
   .content {
     padding: 3rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 3rem;
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+      padding-top: 0.5rem;
+    }
     #markdown {
       img {
         max-width: 100%;
