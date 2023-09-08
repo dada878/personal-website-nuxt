@@ -18,7 +18,8 @@ const blog = useBlogList().find(
 );
 
 useHead({
-  title: blog!.title,
+  title: blog!.title + " - 冰川的個人網站",
+  htmlAttrs: { lang: 'zh-tw' },
   meta: [
     {
       hid: "description",
@@ -27,12 +28,36 @@ useHead({
     },
     {
       property: "og:title",
-      content: blog!.title,
+      content: blog!.title + " - 冰川的個人網站",
     },
     {
       property: "og:description",
       content: blog!.content.replaceAll("/n", " "),
     },
+    {
+      property: "og:url",
+      content: "https://dada878.tk/blogs/" + blog!.id,
+    },
+    {
+      property: "og:image",
+      content: "https://dada878.tk/logo.png",
+    },
+    {
+      property: "og:type",
+      content: "article",
+    },
+    {
+      property: "article:author",
+      content: "冰川",
+    },
+    {
+      property: "article:section",
+      content: blog!.category ?? "未分類",
+    },
+    {
+      property: "article:tag",
+      content: blog!.category ?? "未分類",
+    }
   ],
 });
 

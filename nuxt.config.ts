@@ -36,4 +36,5 @@ export default defineNuxtConfig({
       ...projects.map((item) => `/projects/${item.id}`),
     ],
   },
+  
 });
