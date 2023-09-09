@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNavbar></PageNavbar>
-    <router-view :class="{ router: $route.path !== '/' }" />
+    <router-view />
     <PageFooter></PageFooter>
   </div>
 </template>

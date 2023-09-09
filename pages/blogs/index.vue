@@ -118,8 +118,6 @@ interface Post {
   category: string | null;
 }
 
-
-
 const blogList: Ref<Array<Post>> = ref([]);
 const router = useRouter();
 
