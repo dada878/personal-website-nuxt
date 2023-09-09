@@ -128,8 +128,8 @@ function goCategory(category: string) {
     router.push(`/blogs`);
   } else {
     router.push(`/blogs?category=${category}`);
-    updateRenderResult(category);
   }
+  updateRenderResult(category);
 }
 
 function updateRenderResult(category: string) {
