@@ -1,5 +1,8 @@
 <template>
   <div class="page-container">
+    <div class="categories">
+      <span @click="goCategory(item)" class="category-item" v-for="item in categories">{{ item }}</span>
+    </div>
     <div class="posts">
       <article
         @click="goBlogPost(post.id)"
@@ -18,6 +21,25 @@
   </div>
 </template>
 <style lang="scss">
+.categories {
+  display: flex;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  .category-item {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #364049;
+    color: #c6cad6;
+    outline: 1px solid transparent;
+    transition: 200ms;
+    &:hover {
+      cursor: pointer;
+      outline: 1px solid rgba(198, 202, 214, 0.3411764706);
+      background-color: #364049b0;
+    }
+  }
+}
 .posts {
   display: flex;
   flex-direction: column;
@@ -96,11 +118,36 @@ interface Post {
   category: string | null;
 }
 
+
+
 const blogList: Ref<Array<Post>> = ref([]);
-
-blogList.value = useBlogList();
-
 const router = useRouter();
+
+function goCategory(category: string) {
+  if (category === "全部") {
+    router.push(`/blogs`);
+  } else {
+    router.push(`/blogs?category=${category}`);
+    updateRenderResult(category);
+  }
+}
+
+function updateRenderResult(category: string) {
+  if (category === "全部") {
+    category = "";
+  }
+  blogList.value = useBlogList().filter((post) => {
+    if (category) {
+      return post.category === category;
+    } else {
+      return true;
+    }
+  });
+}
+
+updateRenderResult(useRoute().query.category as string);
+
+const categories = ref(["全部", ...new Set(useBlogList().map((post) => post.category))]);
 
 const goBlogPost = (id: string) => {
   router.push(`/blogs/${id}`);
