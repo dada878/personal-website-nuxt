@@ -62,20 +62,24 @@ content.value = blog!.content;
 
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
+import highlight from "markdown-it-highlightjs";
 
 const renderer = md({
   html: true,
   linkify: true,
   typographer: true
-}).use(mathjax);
+}).use(mathjax).use(highlight);
 
 const renderedContent = ref(renderer.render(content.value));
 
-onUpdated(() => {
-  hljs.configure({ ignoreUnescapedHTML: true });
+onMounted(() => {
+  setTimeout(() => {
+    hljs.configure({ ignoreUnescapedHTML: true });
   for (const block of document.querySelectorAll("code")) {
     hljs.highlightElement(block);
   }
+  console.log("highlighted");
+  }, 100);
 });
 </script>
 <style lang="scss">
