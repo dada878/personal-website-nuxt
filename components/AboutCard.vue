@@ -2,7 +2,7 @@
     <section class="about">
         <h1>關於</h1>
         <p>{{greeting}}我是一個人類</p>
-        <p>目前年齡 {{currentAge}} 歲</p>
+        <p>目前年齡 <ClientOnly placeholder="00.0000000000"> {{currentAge}} </ClientOnly> 歲</p>
         <p>擅長網頁前端開發與 Python 網路爬蟲</p>
         <p>近期正在學習各種演算法與資料結構</p>
         <p>這是使用 Vue 建立的網站</p>
