@@ -124,7 +124,7 @@ const blogList: Ref<Array<Post>> = ref([]);
 const router = useRouter();
 
 function goCategory(category: string) {
-  if (category === "全部") {
+  if (category === "All") {
     router.push(`/blogs`);
   } else {
     router.push(`/blogs?category=${category}`);
@@ -133,7 +133,7 @@ function goCategory(category: string) {
 }
 
 function updateRenderResult(category: string) {
-  if (category === "全部") {
+  if (category === "All") {
     category = "";
   }
   blogList.value = useBlogList().filter((post) => {
@@ -147,7 +147,7 @@ function updateRenderResult(category: string) {
 
 updateRenderResult(useRoute().query.category as string);
 
-const categories = ref(["全部", ...new Set(useBlogList().map((post) => post.category))]);
+const categories = ref(["All", ...new Set(useBlogList().map((post) => post.category))]);
 
 const goBlogPost = (id: string) => {
   router.push(`/blogs/${id}`);
