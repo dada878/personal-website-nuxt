@@ -5,13 +5,13 @@
       <h2 class="subtitle">歡迎你來造訪本網站 owo</h2>
     </div>
     <div class="links">
-      <a target="_blank" href="https://github.com/dada878">
+      <a target="_blank" href="https://github.com/dada878" aria-label="github link">
         <font-awesome-icon icon="fa-brands fa-github" />
       </a>
-      <a target="_blank" href="https://discordapp.com/users/611118369474740244/">
+      <a target="_blank" href="https://discordapp.com/users/611118369474740244/"  aria-label="discord link">
         <font-awesome-icon icon="fa-brands fa-discord" />
       </a>
-      <a target="_blank" href="mailto:xx0932399@gmail.com">
+      <a target="_blank" href="mailto:xx0932399@gmail.com"  aria-label="gmail link">
         <font-awesome-icon icon="fa-solid fa-envelope" />
       </a>
     </div>

@@ -4,17 +4,17 @@
         <div class="skill-cards">
             <div>
                 <font-awesome-icon icon="fa-brands fa-python" />
-                <h3>Python 3 年</h3>
+                <p class="skill-name">Python 3 年</p>
                 <button>查看相關作品</button>
             </div>
             <div>
                 <font-awesome-icon icon="fa-brands fa-html5" />
-                <h3>網頁前端 3 年</h3>
+                <p class="skill-name">網頁前端 3 年</p>
                 <button>查看相關作品</button>
             </div>
             <div>
                 <font-awesome-icon icon="fa-brands fa-unity" />
-                <h3>遊戲開發 1 年</h3>
+                <p class="skill-name">遊戲開發 1 年</p>
                 <button>查看相關作品</button>
             </div>
         </div>
@@ -31,8 +31,10 @@
         align-items: stretch;
         gap: 1rem;
 
-        h3 {
+        .skill-name {
             margin: 0rem;
+            font-size: 1.17rem;
+            font-weight: bold;
         }
 
         div {

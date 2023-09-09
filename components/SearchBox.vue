@@ -1,7 +1,7 @@
 <template>
   <div class="search-section">
     <a class="logo" href="/">
-      <img class="logo-img" src="/logo-circle.png" />
+      <img alt="logo" class="logo-img" src="/logo-circle.png" />
     </a>
     <div class="search-block">
       <input
