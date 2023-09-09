@@ -59,6 +59,7 @@ library.add(faGithub, faDiscord, faEnvelope);
     display: flex;
     gap: 2rem;
     opacity: 0;
+    margin-bottom: 3rem;
     a {
       &:nth-child(1) {
         animation: fade-in 700ms 1.2s forwards;
