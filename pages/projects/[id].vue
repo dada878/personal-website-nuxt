@@ -6,7 +6,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import hljs from "highlight.js";
 import "highlight.js/styles/nord.css";
 
 const router = useRouter();
@@ -72,15 +71,6 @@ const renderer = md({
 
 const renderedContent = ref(renderer.render(content.value));
 
-onMounted(() => {
-  setTimeout(() => {
-    hljs.configure({ ignoreUnescapedHTML: true });
-  for (const block of document.querySelectorAll("code")) {
-    hljs.highlightElement(block);
-  }
-  console.log("highlighted");
-  }, 100);
-});
 </script>
 <style lang="scss">
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");
