@@ -108,6 +108,10 @@ useHead({
       property: "og:image",
       content: "https://dada878.tk/logo.png",
     },
+    {
+      name: "keywords",
+      content: "資料結構, 演算法, 競程, 數學, blog, 部落格, 冰川, dada878",
+    },
   ],
 });
 

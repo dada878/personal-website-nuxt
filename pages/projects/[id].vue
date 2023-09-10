@@ -52,7 +52,11 @@ useHead({
     {
       property: "article:tag",
       content: blog!.category ?? "未分類",
-    }
+    },
+    {
+      name: "keywords",
+      content: blog!.category ?? "未分類",
+    },
   ],
 });
 

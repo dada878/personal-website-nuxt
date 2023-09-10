@@ -95,6 +95,10 @@ useHead({
       property: "og:image",
       content: "https://dada878.tk/logo.png",
     },
+    {
+      name: "keywords",
+      content: "作品集, 專案, projects, 冰川, dada878",
+    },
   ],
 });
 
