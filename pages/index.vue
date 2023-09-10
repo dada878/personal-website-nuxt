@@ -6,17 +6,18 @@
 </template>
 
 <script lang="ts" setup>
-import AboutMe from '@/components/AboutMe.vue';
-import HomeBanner from '@/components/HomeBanner.vue';
+import AboutMe from "@/components/AboutMe.vue";
+import HomeBanner from "@/components/HomeBanner.vue";
 
 useHead({
   title: "冰川的個人網站",
-  htmlAttrs: { lang: 'zh-tw' },
+  htmlAttrs: { lang: "zh-tw" },
   meta: [
     {
       hid: "description",
       name: "description",
-      content: "歡迎來到我的網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+      content:
+        "歡迎來到我的網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
     },
     {
       property: "og:title",
@@ -24,7 +25,8 @@ useHead({
     },
     {
       property: "og:description",
-      content: "歡迎來到我的網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+      content:
+        "歡迎來到我的網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
     },
     {
       property: "og:url",
@@ -38,11 +40,12 @@ useHead({
       property: "og:type",
       content: "website",
     },
+    {
+      name: "keywords",
+      content: "冰川, dada878, Dada878, 冰川的個人網站, 冰川網站",
+    },
   ],
 });
-
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
