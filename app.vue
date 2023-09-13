@@ -1,8 +1,9 @@
 <template>
+  <NuxtLoadingIndicator color="#6ba2db" :throttle="0" :height="3" />
   <div>
-    <PageNavbar></PageNavbar>
-    <router-view />
-    <PageFooter></PageFooter>
+    <PageNavbar />
+    <NuxtPage />
+    <PageFooter />
   </div>
 </template>
 
