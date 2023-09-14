@@ -67,6 +67,7 @@ interface Post {
   id: string;
   title: string;
   content: string;
+  date: string;
   category: string | null;
 }
 
@@ -104,7 +105,9 @@ useHead({
 
 const projectList: Ref<Array<Post>> = ref([]);
 
-projectList.value = useProjectList();
+projectList.value = useProjectList().sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 
 const router = useRouter();
 

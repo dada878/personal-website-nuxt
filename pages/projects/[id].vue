@@ -1,6 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="content">
+      <p>最後更新日期 {{ date.replaceAll("/", " / ") }}</p>
       <div class="markdown" v-html="renderedContent"></div>
     </div>
   </div>
@@ -11,6 +12,7 @@ import "highlight.js/styles/nord.css";
 const router = useRouter();
 const title = ref("");
 const content = ref("");
+const date = ref("");
 
 const blog = useProjectList().find(
   (item) => item.id === router.currentRoute.value.params.id
@@ -62,6 +64,7 @@ useHead({
 
 title.value = blog!.title;
 content.value = blog!.content;
+date.value = blog!.date;
 
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
