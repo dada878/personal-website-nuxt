@@ -1,7 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="content">
-      <div id="markdown" v-html="renderedContent"></div>
+      <div class="markdown" v-html="renderedContent"></div>
     </div>
   </div>
 </template>
@@ -107,7 +107,7 @@ pre > code {
       padding: 1.5rem;
       padding-top: 0.5rem;
     }
-    #markdown {
+    .markdown {
       img {
         max-width: 100%;
       }
