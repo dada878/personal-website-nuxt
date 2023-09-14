@@ -6,6 +6,7 @@ interface Post {
   title: string;
   content: string;
   category: string | null;
+  date: string;
   url: string;
 }
 
@@ -65,7 +66,9 @@ export const useSearch = () => {
             longestCommonSubstring(b.content.toLowerCase(), keyword);
           return bSubstringLength - aSubstringLength;
         })
-        .slice(0, resultCount);
+        .slice(0, resultCount).sort((a, b) => {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
     },
   };
 };

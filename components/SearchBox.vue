@@ -47,6 +47,7 @@ interface Post {
   content: string;
   category: string | null;
   url: string;
+  date: string;
 }
 
 const searchResult: Ref<Array<Post>> = ref([]);
