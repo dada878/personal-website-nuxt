@@ -32,7 +32,7 @@ useHead({
         },
         {
             property: "og:image",
-            content: "https://dada878.tk/logo.png",
+            content: "https://dada878.com/logo.png",
         },
     ],
 });

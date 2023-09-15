@@ -30,11 +30,11 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://dada878.tk",
+      content: "https://dada878.com",
     },
     {
       property: "og:image",
-      content: "https://dada878.tk/logo.png",
+      content: "https://dada878.com/logo.png",
     },
     {
       property: "og:type",

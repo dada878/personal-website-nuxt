@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
   modules: ["nuxt-simple-sitemap", "nuxt-simple-robots"],
   site: {
-    url: "https://dada878.tk",
+    url: "https://dada878.com",
   },
   sitemap: {
     urls: async () => {
