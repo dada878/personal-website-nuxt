@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <p>© Copyright 2023 dada878.tk</p>
+        <p>© Copyright 2023 dada878.com</p>
     </div>
 </template>
 <script lang="ts" setup>

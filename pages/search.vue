@@ -42,11 +42,11 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://dada878.tk/search?q=" + query,
+      content: "https://dada878.com/search?q=" + query,
     },
     {
       property: "og:image",
-      content: "https://dada878.tk/logo.png",
+      content: "https://dada878.com/logo.png",
     },
   ],
 });

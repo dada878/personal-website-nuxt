@@ -46,7 +46,7 @@ for item in data['tree']:
             blogList.append(page_data)
             
 base_url = "./content"
-website_url = "https://dada878.tk"
+website_url = "https://dada878.com"
 
 def download_image(url, path):
     urllib.request.urlretrieve(url, path)

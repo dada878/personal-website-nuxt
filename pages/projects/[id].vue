@@ -37,11 +37,11 @@ useHead({
     },
     {
       property: "og:image",
-      content: "https://dada878.tk/logo.png",
+      content: "https://dada878.com/logo.png",
     },
     {
       property: "og:url",
-      content: "https://dada878.tk/projects/" + blog!.id,
+      content: "https://dada878.com/projects/" + blog!.id,
     },
     {
       property: "article:author",
