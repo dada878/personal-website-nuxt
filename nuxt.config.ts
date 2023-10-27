@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
 import projects from "./content/projects.json";
+import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -21,11 +22,16 @@ export default defineNuxtConfig({
   sitemap: {
     urls: async () => {
       return blogs.map((page) => ({
-        loc: `/blog/${page.id}`,
+        loc: `/blogs/${page.id}`,
         lastmod: Date().toString(),
         changefreq: "daily",
         priority: 0.8,
-      }));
+      })).concat(projects.map((page) => ({
+        loc: `/projects/${page.id}`,
+        lastmod: Date().toString(),
+        changefreq: "daily",
+        priority: 0.8,
+      }))) as SitemapEntryInput[];
     },
   },
   generate: {
