@@ -8,6 +8,9 @@
 </template>
 <script lang="ts" setup>
 import "highlight.js/styles/nord.css";
+import md from "markdown-it";
+import mathjax from "markdown-it-mathjax3";
+import highlight from "markdown-it-highlightjs";
 
 const router = useRouter();
 const title = ref("");
@@ -70,10 +73,6 @@ title.value = blog!.title;
 content.value = blog!.content;
 date.value = blog!.date;
 
-import md from "markdown-it";
-import mathjax from "markdown-it-mathjax3";
-import highlight from "markdown-it-highlightjs";
-
 const renderer = md({
   html: true,
   linkify: true,
@@ -89,6 +88,9 @@ pre > code {
   border-radius: 0.5rem;
   font-family: "Cascadia Code", sans-serif;
   tab-size: 4;
+  .hljs-comment {
+    color: #9eb8da8c;
+  }
 }
 
 .blog-post {
@@ -96,7 +98,7 @@ pre > code {
   margin-left: 20%;
   margin-right: 20%;
   background-color: #364049b0;
-  color: #e0e2e9cb;
+  color: #e0e2e9e7;
   min-height: 100vh;
   @media (max-width: 768px) {
     margin-left: 0%;
@@ -120,6 +122,21 @@ pre > code {
       }
       a:hover {
         text-decoration: underline;
+      }
+      h1 {
+        border-bottom: 2px solid #e0e2e967;
+        padding-bottom: 1rem;
+      }
+      h2 {
+        border-left: 0.4rem solid #e0e2e967;
+        padding-left: 0.5rem;
+        padding-top: 0.4rem;
+        margin-top: 2rem;
+      }
+      table, th, td {
+        border: 1px solid #a3b4be8e;
+        border-collapse: collapse;
+        padding: 0.5rem;
       }
     }
   }
