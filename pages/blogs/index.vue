@@ -22,10 +22,13 @@
 </template>
 <style lang="scss">
 .categories {
+  overflow-x: scroll;
   display: flex;
   margin-top: -1rem;
   margin-bottom: 1rem;
+  padding: 0.1rem;
   gap: 1rem;
+  scrollbar-width: none;
   .category-item {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
