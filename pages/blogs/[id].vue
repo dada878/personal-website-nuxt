@@ -116,6 +116,23 @@ pre > code {
       img {
         max-width: 100%;
       }
+      code:not(pre code){
+        background-color: #62687a9f;
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+        margin: 0rem;
+      }
+      blockquote {
+        background-color: #62687a9f;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 0rem;
+        position: relative;
+        border-top: 0.5rem solid #e0e2e949;
+        p {
+          margin: 0rem;
+        }
+      }
       a {
         color: rgb(125, 205, 211);
         text-decoration: none;
