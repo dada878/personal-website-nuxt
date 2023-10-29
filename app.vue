@@ -22,7 +22,9 @@
 
 .markdown {
   letter-spacing: 0.07em;
-  line-height: 1.6rem;
+  p {
+    line-height: 1.6rem;
+  }
   pre > code {
     letter-spacing: normal;
     line-height: 1.3rem
