@@ -6,9 +6,9 @@
       <article class="post" v-for="post in searchResult" :key="post.id" @click="goBlogPost(post.id)">
         <h2 class="title">{{ post.title }}</h2>
         <p class="description">{{ post.content }}</p>
-        <span v-if="post.category" class="tag"
-          ><font-awesome-icon icon="fa-tag" /> {{ post.category }}</span
-        >
+        <span v-if="post.category" class="tag">
+          <font-awesome-icon icon="fa-tag" /> {{ post.category }}
+        </span>
       </article>
     </div>
   </div>
