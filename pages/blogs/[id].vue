@@ -49,6 +49,22 @@ useHead({
         ],
       }),
     },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: title.value,
+        image: "https://dada878.com/logo.png",
+        datePublished: new Date(date.value).toISOString(),
+        dateModified: new Date(date.value).toISOString(),
+        author: {
+          "@type": "Person",
+          name: "冰川",
+          url: "https://dada878.com",
+        },
+      }),
+    },
   ],
 });
 
