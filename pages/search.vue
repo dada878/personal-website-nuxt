@@ -30,6 +30,26 @@ useSeoMeta({
   ogImage: "https://dada878.com/logo.png",
   ogUrl: () => "https://dada878.com/search?q=" + query
 });
+useHead({
+  title: `${query} 的搜尋結果`,
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "搜尋",
+            item: "https://dada878.com/search",
+          },
+        ],
+      }),
+    },
+  ],
+});
 </script>
 <style lang="scss" scoped>
 .search-result-title {

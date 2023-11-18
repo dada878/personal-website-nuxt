@@ -27,6 +27,29 @@ date.value = blog!.date;
 
 useHead({
   title: title.value,
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "部落格",
+            item: "https://dada878.com/blogs",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: title.value,
+            item: `https://dada878.com/blogs/${blog!.id}`,
+          },
+        ],
+      }),
+    },
+  ],
 });
 
 useSeoMeta({
@@ -40,8 +63,10 @@ useSeoMeta({
 const renderer = md({
   html: true,
   linkify: true,
-  typographer: true
-}).use(mathjax).use(highlight);
+  typographer: true,
+})
+  .use(mathjax)
+  .use(highlight);
 
 const renderedContent = ref(renderer.render(content.value));
 </script>
@@ -80,7 +105,7 @@ pre > code {
       img {
         max-width: 100%;
       }
-      code:not(pre code){
+      code:not(pre code) {
         background-color: #62687a9f;
         border-radius: 0.5rem;
         padding: 0.2rem;
@@ -114,7 +139,9 @@ pre > code {
         padding-top: 0.4rem;
         margin-top: 2rem;
       }
-      table, th, td {
+      table,
+      th,
+      td {
         border: 1px solid #a3b4be8e;
         border-collapse: collapse;
         padding: 0.5rem;

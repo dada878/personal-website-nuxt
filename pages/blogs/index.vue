@@ -88,6 +88,23 @@ library.add(faTag);
 
 useHead({
   title: "部落格",
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "部落格",
+            item: "https://dada878.com/blogs",
+          },
+        ],
+      }),
+    },
+  ],
 });
 
 useSeoMeta({

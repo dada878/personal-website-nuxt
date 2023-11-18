@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       "@fortawesome/free-brands-svg-icons",
     ],
   },
-  modules: ["nuxt-simple-sitemap", "nuxt-simple-robots", "nuxt-schema-org",],
+  modules: ["nuxt-simple-sitemap", "nuxt-simple-robots", "nuxt-schema-org", "nuxt-seo-ui"],
   site: {
     name: "冰川的個人網站",
     url: "https://dada878.com",

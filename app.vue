@@ -26,7 +26,17 @@ useSeoMeta({
   ogDescription: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
   ogUrl: "https://dada878.com",
   ogImage: "https://dada878.com/logo.png",
-})
+});
+
+useSchemaOrg([
+  definePerson({
+    name: '冰川'
+  }),
+  defineWebSite({
+    name: '冰川的個人網站',
+  }),
+  defineWebPage(),
+]);
 </script>
 
 <style lang="scss">
