@@ -11,7 +11,7 @@
 </template>
 <script lang="ts" setup>
 
-import { Ref, ref } from "vue";
+import { ref } from "vue";
 
 function calculateAge() {
   const birthday: Date = new Date(2007, 0, 22);
