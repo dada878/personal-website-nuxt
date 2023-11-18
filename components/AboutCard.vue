@@ -1,12 +1,11 @@
 <template>
     <section class="about">
-        <h1>關於</h1>
-        <p>{{greeting}}我是一個人類</p>
-        <p>目前年齡 <ClientOnly placeholder="00.0000000000"> {{currentAge}} </ClientOnly> 歲</p>
-        <p>擅長網頁前端開發與 Python 網路爬蟲</p>
+        <h2>關於</h2>
+        <p>{{greeting}}我是一個 <ClientOnly placeholder="00.0000000000"> {{currentAge}} </ClientOnly> 歲的人類</p>
         <p>近期正在學習各種演算法與資料結構</p>
-        <p>這是使用 Vue 建立的網站</p>
+        <p>這是使用 Vue / Nuxt 建立的個人網站</p>
         <p>未來希望可以在這裡放更多文章和作品</p>
+        <p>目前 Codeforces Rating: {{ rating }}</p>
     </section>
 </template>
 <script lang="ts" setup>
@@ -24,6 +23,7 @@ function calculateAge() {
 const greeting = ref("");
 const currentHour = new Date().getHours();
 const currentAge: Ref<string> = ref(calculateAge());
+const rating = ref(0);
 
 setInterval(() => {
   currentAge.value = calculateAge();
@@ -36,6 +36,12 @@ if (currentHour > 4 && currentHour < 12) {
 } else {
     greeting.value = "晚上好";
 }
+
+fetch("https://codeforces.com/api/user.info?handles=dada878")
+    .then((res) => res.json())
+    .then((res) => {
+        rating.value = res.result[0].rating;
+    });
 
 </script>
 <style lang="scss" scoped>

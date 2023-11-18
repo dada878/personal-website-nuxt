@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1>個人經歷</h1>
+        <h2>個人經歷</h2>
         <div class="step">
             <div class="stepper">
                 <div class="circle"></div>
