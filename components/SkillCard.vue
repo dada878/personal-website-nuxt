@@ -1,6 +1,6 @@
 <template>
     <section class="skills">
-        <h1>技能</h1>
+        <h2>技能</h2>
         <div class="skill-cards">
             <div>
                 <font-awesome-icon icon="fa-brands fa-python" />
