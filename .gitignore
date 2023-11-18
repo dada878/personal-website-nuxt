@@ -27,3 +27,6 @@ logs
 .vercel
 
 /content
+/public/uploads
+
+todo.txt

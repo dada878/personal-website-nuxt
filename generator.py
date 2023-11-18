@@ -62,7 +62,7 @@ def compile_image(content):
         current_images = re_image.findall(blog['content'])
         for image in current_images:
             hash_id = hashlib.md5(image.encode('utf-8')).hexdigest()
-            image_path = "/images/" + hash_id + ".png"
+            image_path = "/uploads/" + hash_id + ".png"
             download_image(image, "./public" + image_path)
             blog['content'] = blog['content'].replace(image, website_url + image_path)
             
