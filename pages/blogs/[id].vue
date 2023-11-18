@@ -21,57 +21,21 @@ const blog = useBlogList().find(
   (item) => item.id === router.currentRoute.value.params.id
 );
 
-useHead({
-  title: blog!.title + " | 冰川的個人網站",
-  htmlAttrs: { lang: 'zh-tw' },
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: blog!.content.replaceAll("/n", " "),
-    },
-    {
-      property: "og:title",
-      content: blog!.title + " | 冰川的個人網站",
-    },
-    {
-      property: "og:description",
-      content: blog!.content.replaceAll("/n", " "),
-    },
-    {
-      property: "og:url",
-      content: "https://dada878.com/blogs/" + blog!.id,
-    },
-    {
-      property: "og:image",
-      content: "https://dada878.com/logo.png",
-    },
-    {
-      property: "og:type",
-      content: "article",
-    },
-    {
-      property: "article:author",
-      content: "冰川",
-    },
-    {
-      property: "article:section",
-      content: blog!.category ?? "未分類",
-    },
-    {
-      property: "article:tag",
-      content: blog!.category ?? "未分類",
-    },
-    {
-      name: "keywords",
-      content: blog!.category ?? "未分類",
-    },
-  ],
-});
-
 title.value = blog!.title;
 content.value = blog!.content;
 date.value = blog!.date;
+
+useHead({
+  title: title.value,
+});
+
+useSeoMeta({
+  description: content.value.replaceAll("\n", "awa"),
+  ogTitle: title.value + " - 冰川的個人網站",
+  ogDescription: content.value.replaceAll("\n", "awa"),
+  ogImage: "https://dada878.com/logo.png",
+  ogUrl: () => `https://dada878.com/blogs/${blog!.id}`,
+});
 
 const renderer = md({
   html: true,

@@ -8,6 +8,25 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: "首頁",
+  titleTemplate: (title: string) => (title ? `${title} - 冰川的個人網站` : '冰川的個人網站'),
+  htmlAttrs: { lang: "zh-TW" },
+  link: [
+    {
+      rel: 'icon',
+      href: '/favicon.ico'
+    }
+  ]
+});
+
+useSeoMeta({
+  description: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+  ogTitle: "冰川的個人網站",
+  ogDescription: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+  ogUrl: "https://dada878.com",
+  ogImage: "https://dada878.com/logo.png",
+})
 </script>
 
 <style lang="scss">
