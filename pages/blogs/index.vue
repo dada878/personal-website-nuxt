@@ -4,19 +4,18 @@
       <span @click="goCategory(item)" class="category-item" v-for="item in categories">{{ item }}</span>
     </div>
     <div class="posts">
-      <article
-        @click="goBlogPost(post.id)"
-        class="post"
-        v-for="post in blogList"
-        :key="post.id"
-      >
-        <h2 class="title">{{ post.title }}</h2>
-        <p class="description">{{ post.content }}</p>
-
-        <span v-if="post.category" class="tag"
-          ><font-awesome-icon icon="fa-tag" /> {{ post.category }}</span
+        <nuxt-link
+          :to="'/blogs/' + post.id"
+          class="post"
+          v-for="post in blogList"
+          :key="post.id"
         >
-      </article>
+          <h2 class="title">{{ post.title }}</h2>
+          <p class="description">{{ post.content.replaceAll("\n", "") }}</p>
+          <span v-if="post.category" class="tag"
+            ><font-awesome-icon icon="fa-tag" /> {{ post.category }}</span
+          >
+        </nuxt-link>
     </div>
   </div>
 </template>
@@ -51,6 +50,8 @@
     text-align: left;
     padding: 2rem;
     background-color: #364049;
+    color: inherit;
+    text-decoration: none;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
