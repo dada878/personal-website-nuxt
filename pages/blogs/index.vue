@@ -87,35 +87,15 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 library.add(faTag);
 
 useHead({
-  title: "部落格 | 冰川的個人網站",
-  htmlAttrs: { lang: 'zh-tw' },
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: "你可以在這裡找到我的部落格文章 ><",
-    },
-    {
-      property: "og:title",
-      content: "部落格 | 冰川的個人網站",
-    },
-    {
-      property: "og:description",
-      content: "你可以在這裡找到我的部落格文章 ><",
-    },
-    {
-      property: "og:url",
-      content: "https://dada878.com/blogs",
-    },
-    {
-      property: "og:image",
-      content: "https://dada878.com/logo.png",
-    },
-    {
-      name: "keywords",
-      content: "資料結構, 演算法, 競程, 數學, blog, 部落格, 冰川, dada878",
-    },
-  ],
+  title: "部落格",
+});
+
+useSeoMeta({
+  description: "你可以在這裡找到我的部落格文章 ><",
+  ogTitle: "部落格 - 冰川的個人網站",
+  ogDescription: "你可以在這裡找到我的部落格文章 ><",
+  ogImage: "https://dada878.com/logo.png",
+  ogUrl: () => `https://dada878.com/blogs`,
 });
 
 interface Post {

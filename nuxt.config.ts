@@ -1,9 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
 import projects from "./content/projects.json";
+import { installNuxtSiteConfig, updateSiteConfig } from 'nuxt-site-config-kit'
 import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
 export default defineNuxtConfig({
+  async setup(options) {
+    await installNuxtSiteConfig()
+  },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
   build: {
@@ -15,9 +19,15 @@ export default defineNuxtConfig({
       "@fortawesome/free-brands-svg-icons",
     ],
   },
-  modules: ["nuxt-simple-sitemap", "nuxt-simple-robots"],
+  modules: ["nuxt-simple-sitemap", "nuxt-simple-robots", "nuxt-schema-org",],
   site: {
+    name: "冰川的個人網站",
     url: "https://dada878.com",
+    defaultLocale: 'tw',
+    trailingSlash: false,
+    titleSeparator: '|',
+    indexable: process.env.NODE_ENV === 'production',
+    description: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
   },
   sitemap: {
     urls: async () => {
@@ -44,5 +54,5 @@ export default defineNuxtConfig({
   },
   robots: {
     allow: "/",
-  }
+  },
 });

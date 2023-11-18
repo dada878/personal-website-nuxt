@@ -23,32 +23,12 @@ const router = useRouter();
 const goBlogPost = (id: string) => {
   router.push(`/blogs/${id}`);
 };
-useHead({
-  title: `${query} 的搜尋結果 | 冰川的個人網站`,
-  htmlAttrs: { lang: 'zh-tw' },
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: `發現了 ${searchResult.length} 筆關於 ${query} 的搜尋結果`,
-    },
-    {
-      property: "og:title",
-      content: `${query} 的搜尋結果 | 冰川的個人網站`,
-    },
-    {
-      property: "og:description",
-      content: `發現了 ${searchResult.length} 筆關於 ${query} 的搜尋結果`,
-    },
-    {
-      property: "og:url",
-      content: "https://dada878.com/search?q=" + query,
-    },
-    {
-      property: "og:image",
-      content: "https://dada878.com/logo.png",
-    },
-  ],
+useSeoMeta({
+  description: `發現了 ${searchResult.length} 筆關於 ${query} 的搜尋結果`,
+  ogTitle: `${query} 的搜尋結果 - 冰川的個人網站`,
+  ogDescription: `發現了 ${searchResult.length} 筆關於 ${query} 的搜尋結果`,
+  ogImage: "https://dada878.com/logo.png",
+  ogUrl: () => "https://dada878.com/search?q=" + query
 });
 </script>
 <style lang="scss" scoped>
