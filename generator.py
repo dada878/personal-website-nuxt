@@ -4,6 +4,11 @@ import urllib.parse  # Import urllib.parse for URL encoding
 import re
 import hashlib
 import datetime
+import os
+
+# create folders
+os.makedirs('./content', exist_ok=True)
+os.makedirs('./public/uploads', exist_ok=True)
 
 url = 'https://api.github.com/repos/dada878/blog/git/trees/master?recursive=3'
 response = urllib.request.urlopen(url)
