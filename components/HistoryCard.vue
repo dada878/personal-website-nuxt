@@ -8,7 +8,7 @@
             </div>
             <div class="content">
                 <p>國中</p>
-                <p>- 全國貓咪盃 Scratch 競賽遊戲組冠軍</p>
+                <p>- 貓咪盃 Scratch 競賽遊戲組全國第 1</p>
             </div>
         </div>
         <div class="step">
@@ -19,14 +19,16 @@
             <div class="content">
                 <p>高中</p>
                 <p>- APCS 實作題達到 4 級分</p>
-                <p>- 虎尾 Python 程式設計競賽第 10 名</p>
-                <p>- ISSC 青年程式競賽獲得銅獎</p>
+                <p>- ISSC 青年程式競賽銅獎</p>
                 <p>- HP Codewars 高中組第 4 名</p>
-                <p>- 銘傳大學 APCS 冬令營金獎第 1 名</p>
-                <p>- Codeforces Rating 達到 1200+</p>
-                <p>- 資訊奧林匹亞新手同好會個人賽第 5 名</p>
+                <p>- Codeforces Rating 1200+</p>
+                <p>- 資訊奧林匹亞新手同好會個人賽第 2 名</p>
+                <p>- 虎尾 Python 程式設計競賽第 10 名</p>
                 <p>- CPE 檢定成績達到前 3.3%</p>
                 <p>- YTP 少年圖靈計畫入圍決賽</p>
+                <p>- ITSA 檢定 1 小時破台</p>
+                <p>- SCINT 北台灣學生資訊社群行政組</p>
+                <p>- SITCON 2024 開發組</p>
                 <p>- 銘傳大學 APCS 暑訓助教</p>
             </div>
         </div>
