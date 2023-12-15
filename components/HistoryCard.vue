@@ -8,7 +8,7 @@
             </div>
             <div class="content">
                 <p>國中</p>
-                <p>- 全國貓咪盃 Scratch 競賽遊戲組冠軍</p>
+                <p>- 貓咪盃 Scratch 競賽遊戲組全國第 1</p>
             </div>
         </div>
         <div class="step">
