@@ -41,6 +41,9 @@
       background-color: #364049b0;
     }
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .posts {
   display: flex;
