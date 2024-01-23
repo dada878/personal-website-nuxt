@@ -18,7 +18,7 @@
             </div>
             <div class="content">
                 <p>高中</p>
-                <p>- APCS 實作題 4 級分</p>
+                <p>- APCS 實作題 5 級分</p>
                 <p>- ISSC 青年程式競賽銅獎</p>
                 <p>- HP Codewars 高中組第 4 名</p>
                 <p>- Codeforces Rating 1400+</p>
