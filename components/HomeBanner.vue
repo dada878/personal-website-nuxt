@@ -37,15 +37,15 @@ library.add(faGithub, faDiscord, faEnvelope);
   .title {
     opacity: 0;
     animation: fade-in 700ms 0s forwards;
-    font-weight: 400;
-    font-size: calc(2.5rem + 3vw);
+    font-weight: bold;
+    font-size: calc(2.5rem + 2vw);
     margin: 0rem;
   }
 
   .subtitle {
     font-weight: 400;
     animation: fade-in 700ms .5s forwards;
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1rem + 1vw);
     margin: 0rem;
     opacity: 0;
   }
