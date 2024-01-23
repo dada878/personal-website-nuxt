@@ -1,8 +1,8 @@
 <template>
   <div class="banner">
     <div>
-      <h1 class="title">冰川的個人網站</h1>
-      <h2 class="subtitle">一個平凡高中生從零打造的小網站</h2>
+      <h1 class="title">冰川的網站</h1>
+      <h2 class="subtitle">從零親手打造的小網站</h2>
     </div>
     <div class="links">
       <a target="_blank" href="https://github.com/dada878" aria-label="github link">
