@@ -26,7 +26,6 @@ logs
 .vscode
 .vercel
 
-/content
 /public/uploads
 
 todo.txt
