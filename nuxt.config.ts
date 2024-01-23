@@ -54,5 +54,6 @@ export default defineNuxtConfig({
   },
   robots: {
     allow: "/",
+    disallow: ['/blogs', '/projects'],
   },
 });
