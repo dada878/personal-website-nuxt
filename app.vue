@@ -41,6 +41,8 @@ useSchemaOrg([
 
 <style lang="scss">
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
 .page-container {
   padding: 2rem calc(20vw + 1rem);
   font-size: calc(0.8rem + 0.2vw);
@@ -56,7 +58,10 @@ useSchemaOrg([
   }
   pre > code {
     letter-spacing: normal;
-    line-height: 1.3rem
+    line-height: 1.3rem;
+    &::-webkit-scrollbar {
+      height: 0.5rem !important;
+    }
   }
 }
 
@@ -71,7 +76,7 @@ body {
   overflow-x: hidden;
   background-color: #47525e;
   overflow-y: overlay;
-  font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
+  font-family: "Noto Sans TC", Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
