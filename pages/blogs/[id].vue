@@ -69,9 +69,9 @@ useHead({
 });
 
 useSeoMeta({
-  description: content.value.replaceAll("\n", "awa"),
+  description: content.value.replaceAll("\n", " "),
   ogTitle: title.value + " - 冰川的個人網站",
-  ogDescription: content.value.replaceAll("\n", "awa"),
+  ogDescription: content.value.replaceAll("\n", " "),
   ogImage: "https://dada878.com/logo.png",
   ogUrl: () => `https://dada878.com/blogs/${blog!.id}`,
 });
