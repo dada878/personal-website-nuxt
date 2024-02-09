@@ -97,6 +97,11 @@ main .pagination-loader-container {
 .gsc-reactions-count {
   display: none;
 }
+
+.gsc-comment-box:not(.gsc-comment-box-is-reply), .gsc-comment-box {
+  border: none;
+}
+
 .gsc-timeline {
   flex-direction: column-reverse;
 }
@@ -104,10 +109,16 @@ main .pagination-loader-container {
   padding: 0rem 1rem;
 }
 .gsc-comments {
-  gap: 1rem;
+  gap: 0rem !important;
+}
+svg.octicon.octicon-smiley {
+  fill: var(--color-fg-default,var(--color-text-primary));
 }
 .gsc-comments > .gsc-header {
   order: 1;
+}
+em.color-text-secondary.text-sm {
+  display: none;
 }
 .gsc-comments > .gsc-comment-box {
   order: 2;
