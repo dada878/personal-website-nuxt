@@ -65,14 +65,14 @@ main {
   --color-fg-subtle: #545d68;
   --color-canvas-default: #2b353e;
   --color-canvas-overlay: #161b22;
-  --color-canvas-inset: #1c2227;
+  --color-canvas-inset: #232a2f;
   --color-canvas-subtle: #3b454f;
   --color-border-default: #444c56;
   --color-border-muted: #373e47;
   --color-neutral-muted: #636e7b66;
   --color-accent-fg: #539bf5;
   --color-accent-emphasis: #316dca;
-  --color-accent-muted: #4184e466;
+  /* --color-accent-muted: #4184e466; */
   --color-accent-subtle: #388bfd1a;
   --color-success-fg: #57ab5a;
   --color-attention-fg: #c69026;
@@ -100,6 +100,11 @@ main .pagination-loader-container {
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply), .gsc-comment-box {
   border: none;
+}
+
+summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
+	border: none;
+	transform: scale(1.2);
 }
 
 .gsc-timeline {
