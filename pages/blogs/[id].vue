@@ -32,17 +32,7 @@ const title = ref("");
 const content = ref("");
 const date = ref("");
 const runtimeConfig = useRuntimeConfig();
-
-const theme = ref(runtimeConfig.public.base_url + "/css/giscus-theme.css");
-
-// console.log($config.public);
-
-// const config = useRuntimeConfig()
-
-// console.log('Runtime config:', config)
-// if (process.server) {
-//   console.log('API secret:', config.apiSecret)
-// }
+const theme = ref(runtimeConfig.public.production_url + "/css/giscus-theme.css");
 
 console.log(theme.value);
 
