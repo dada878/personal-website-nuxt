@@ -99,17 +99,38 @@ form.color-bg-primary.color-border-primary.gsc-comment-box.gsc-comment-box-is-re
   background-color: #2b353e;
 }
 
+div.color-bg-tertiary.gsc-reply-box {
+  background-color: #333d48;
+}
+
+/* div.color-bg-tertiary.gsc-reply-box > div.form-control.color-text-secondary.color-border-primary.w-full.cursor-text.rounded.border.px-2.py-1.text-left.focus:border-transparent {
+  border: none;
+} */
+
+.gsc-timeline {
+  background-color: #333d48;
+  gap: 0rem !important;
+}
+
 .gsc-reactions-count {
   display: none;
 }
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply), .gsc-comment-box {
   border: none;
+  border-radius: 0 !important;
+}
+
+.gsc-reactions summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
+	transform: scale(1.2);
+}
+
+.gsc-upvote-button {
+  display: none;
 }
 
 summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
 	border: none;
-	transform: scale(1.2);
 }
 
 .gsc-timeline {
@@ -120,6 +141,14 @@ summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
 }
 .gsc-comments {
   gap: 0rem !important;
+}
+ul.gsc-right-header.BtnGroup {
+  display: none;
+}
+.gsc-comment > div {
+  border-radius: 0 !important;
+  border-bottom: none !important;
+  border-right: none !important;
 }
 svg.octicon.octicon-smiley {
   fill: var(--color-fg-default,var(--color-text-primary));
