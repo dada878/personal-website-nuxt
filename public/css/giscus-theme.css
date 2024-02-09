@@ -134,6 +134,13 @@ summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
 .gsc-comments {
   gap: 0rem !important;
 }
+ul.gsc-right-header.BtnGroup {
+  display: none;
+}
+.gsc-comment > div {
+  border-radius: 0 !important;
+  border-bottom: none !important;
+}
 svg.octicon.octicon-smiley {
   fill: var(--color-fg-default,var(--color-text-primary));
 }
