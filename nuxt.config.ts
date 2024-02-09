@@ -5,8 +5,18 @@ import { installNuxtSiteConfig, updateSiteConfig } from 'nuxt-site-config-kit'
 import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      base_url: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://dada878.com',
+    }
+  },
   async setup(options) {
     await installNuxtSiteConfig()
+  },
+  vue: {  
+    compilerOptions: {
+      isCustomElement: (tag) => ['giscus-widget'].includes(tag),
+    },
   },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],

@@ -4,6 +4,20 @@
       <p>最後更新日期 {{ date.replaceAll("/", " / ") }}</p>
       <div class="markdown" v-html="renderedContent"></div>
     </div>
+    <Giscus
+      repo="dada878/blog"
+      repo-id="R_kgDOKOVTgA"
+      category="Blog Comments"
+      category-id="DIC_kwDOKOVTgM4CdE9E"
+      mapping="pathname"
+      strict="0"
+      reactions-enabled="1"
+      emit-metadata="0"
+      input-position="bottom"
+      :theme="theme"
+      lang="zh-TW"
+      crossorigin="anonymous"
+    />
   </div>
 </template>
 <script lang="ts" setup>
@@ -11,11 +25,26 @@ import "highlight.js/styles/nord.css";
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
 import highlight from "markdown-it-highlightjs";
+import Giscus from '../../components/giscus';
 
 const router = useRouter();
 const title = ref("");
 const content = ref("");
 const date = ref("");
+const runtimeConfig = useRuntimeConfig();
+
+const theme = ref(runtimeConfig.public.base_url + "/css/giscus-theme.css");
+
+// console.log($config.public);
+
+// const config = useRuntimeConfig()
+
+// console.log('Runtime config:', config)
+// if (process.server) {
+//   console.log('API secret:', config.apiSecret)
+// }
+
+console.log(theme.value);
 
 const blog = useBlogList().find(
   (item) => item.id === router.currentRoute.value.params.id
