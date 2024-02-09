@@ -99,6 +99,19 @@ form.color-bg-primary.color-border-primary.gsc-comment-box.gsc-comment-box-is-re
   background-color: #2b353e;
 }
 
+div.color-bg-tertiary.gsc-reply-box {
+  background-color: #333d48;
+}
+
+/* div.color-bg-tertiary.gsc-reply-box > div.form-control.color-text-secondary.color-border-primary.w-full.cursor-text.rounded.border.px-2.py-1.text-left.focus:border-transparent {
+  border: none;
+} */
+
+.gsc-timeline {
+  background-color: #333d48;
+  gap: 0rem !important;
+}
+
 .gsc-reactions-count {
   display: none;
 }
