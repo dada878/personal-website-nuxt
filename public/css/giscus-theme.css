@@ -72,7 +72,7 @@ main {
   --color-neutral-muted: #636e7b66;
   --color-accent-fg: #539bf5;
   --color-accent-emphasis: #316dca;
-  /* --color-accent-muted: #4184e466; */
+  --color-accent-muted: #444c56;
   --color-accent-subtle: #388bfd1a;
   --color-success-fg: #57ab5a;
   --color-attention-fg: #c69026;
@@ -94,6 +94,11 @@ main .pagination-loader-container {
 }
 
 /*! Custom CSS */
+
+form.color-bg-primary.color-border-primary.gsc-comment-box.gsc-comment-box-is-reply > div.color-bg-tertiary.color-border-primary.gsc-comment-box-tabs {
+  background-color: #2b353e;
+}
+
 .gsc-reactions-count {
   display: none;
 }
@@ -133,6 +138,9 @@ em.color-text-secondary.text-sm {
 }
 .gsc-homepage-bg {
   background-color: #15202b;
+}
+div.color-bg-primary.w-full.min-w-0.rounded-md.border.color-box-border-info {
+  border-radius: 0;
 }
 main .gsc-loading-image {
   background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
