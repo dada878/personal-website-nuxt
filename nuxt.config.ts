@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       base_url: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://dada878.com',
+      production_url: 'https://dada878.com',
     }
   },
   async setup(options) {

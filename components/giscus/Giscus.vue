@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 
 import type {
   AvailableLanguage,
@@ -57,27 +56,3 @@ onMounted(() => {
     :loading="loading"
   />
 </template>
-<style>
-  giscus-widget {
-    display: flex;
-    margin: auto;
-    max-width: 640px;
-    /* margin: 1rem; */
-    /* padding: 1rem; */
-    /* #comments {
-      background-color: red;
-    } */
-  }
-  /* .giscus-frame {
-    background-color: red !important;
-  }
-  .giscus {
-    background-color: red !important;
-  }
-  .gsc-comment-box {
-    background-color: #364049b0;
-  }
-  .color-bg-primary {
-    background-color: #364049b0;
-  } */
-</style>
