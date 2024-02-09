@@ -147,6 +147,7 @@ pre > code {
         margin: 0rem;
       }
       blockquote {
+        overflow-x: scroll;
         background-color: #62687a9f;
         border-radius: 0.5rem;
         padding: 1rem;
