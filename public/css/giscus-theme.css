@@ -118,11 +118,19 @@ div.color-bg-tertiary.gsc-reply-box {
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply), .gsc-comment-box {
   border: none;
+  border-radius: 0 !important;
+}
+
+.gsc-reactions summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
+	transform: scale(1.2);
+}
+
+.gsc-upvote-button {
+  display: none;
 }
 
 summary.link-secondary.gsc-reactions-button.gsc-social-reaction-summary-item  {
 	border: none;
-	transform: scale(1.2);
 }
 
 .gsc-timeline {
@@ -140,6 +148,7 @@ ul.gsc-right-header.BtnGroup {
 .gsc-comment > div {
   border-radius: 0 !important;
   border-bottom: none !important;
+  border-right: none !important;
 }
 svg.octicon.octicon-smiley {
   fill: var(--color-fg-default,var(--color-text-primary));
