@@ -44,10 +44,10 @@ for item in data['tree']:
             "date": formatted_date
         }
         
-        if path.startswith('projects/'):
-            projectList.append(page_data)
+        # if path.startswith('projects/'):
+        #     projectList.append(page_data)
             
-        elif path.startswith('blogs/'):
+        if path.startswith('blogs/'):
             blogList.append(page_data)
             
 base_url = "./content"
