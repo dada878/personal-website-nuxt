@@ -15,10 +15,10 @@ const pages: Array<Post> = [
     ...item,
     url: `/blogs/${item.id}`,
   })),
-  ...projects.map((item) => ({
-    ...item,
-    url: `/projects/${item.id}`,
-  })),
+  // ...projects.map((item) => ({
+  //   ...item,
+  //   url: `/projects/${item.id}`,
+  // })),
 ];
 
 function longestCommonSubstring(s1: string, s2: string) {
@@ -46,7 +46,7 @@ export const useSearch = () => {
     query(
       keyword: string,
       resultCount: number = 5,
-      mustMatch: boolean = false
+      mustMatch: boolean = false,
     ) {
       keyword = keyword.toLowerCase();
       const filteredPages = mustMatch
@@ -59,11 +59,9 @@ export const useSearch = () => {
       return filteredPages
         .sort((a, b) => {
           const aSubstringLength =
-            longestCommonSubstring(a.title.toLowerCase(), keyword) * 2 +
-            longestCommonSubstring(a.content.toLowerCase(), keyword);
+            longestCommonSubstring(a.title.toLowerCase(), keyword);
           const bSubstringLength =
-            longestCommonSubstring(b.title.toLowerCase(), keyword) * 2 +
-            longestCommonSubstring(b.content.toLowerCase(), keyword);
+            longestCommonSubstring(b.title.toLowerCase(), keyword);
           return bSubstringLength - aSubstringLength;
         })
         .slice(0, resultCount).sort((a, b) => {

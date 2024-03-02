@@ -3,21 +3,19 @@
     <div class="content">
       <p>最後更新日期 {{ date.replaceAll("/", " / ") }}</p>
       <div class="markdown" v-html="renderedContent"></div>
+      <h2>推薦文章</h2>
+      <div class="posts">
+        <nuxt-link
+          v-for="post in recommendation"
+          :key="post.id"
+          :to="`/blogs/${post.id}`"
+          class="post"
+        >
+          <h2 class="title">{{ post.title }}</h2>
+          <p class="description">{{ removeMarkdown(post.content) }}</p>
+        </nuxt-link>
+      </div>
     </div>
-    <Giscus
-      repo="dada878/blog"
-      repo-id="R_kgDOKOVTgA"
-      category="Blog Comments"
-      category-id="DIC_kwDOKOVTgM4CdE9E"
-      mapping="pathname"
-      strict="0"
-      reactions-enabled="1"
-      emit-metadata="0"
-      input-position="bottom"
-      :theme="theme"
-      lang="zh-TW"
-      crossorigin="anonymous"
-    />
   </div>
 </template>
 <script lang="ts" setup>
@@ -25,7 +23,6 @@ import "highlight.js/styles/nord.css";
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
 import highlight from "markdown-it-highlightjs";
-import Giscus from '../../components/giscus';
 
 const router = useRouter();
 const title = ref("");
@@ -115,6 +112,8 @@ const renderer = md({
   .use(mathjax)
   .use(highlight);
 
+const recommendation = useSearch().query(title.value, 4, false).slice(1, 4);
+
 const renderedContent = ref(renderer.render(content.value));
 </script>
 <style lang="scss">
@@ -143,10 +142,15 @@ pre > code {
   .content {
     padding: 3rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     @media (max-width: 768px) {
       padding: 1.5rem;
       padding-top: 0.5rem;
+    }
+    .markdown > h2, h2 {
+      border-left: 0.4rem solid #e0e2e967;
+      padding-left: 0.5rem;
+      margin-top: 2rem;
     }
     .markdown {
       img {
@@ -181,12 +185,6 @@ pre > code {
         border-bottom: 2px solid #e0e2e967;
         padding-bottom: 1rem;
       }
-      h2 {
-        border-left: 0.4rem solid #e0e2e967;
-        padding-left: 0.5rem;
-        padding-top: 0.4rem;
-        margin-top: 2rem;
-      }
       table,
       th,
       td {
@@ -194,6 +192,48 @@ pre > code {
         border-collapse: collapse;
         padding: 0.5rem;
       }
+    }
+  }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .post {
+    text-align: left;
+    padding: 2rem;
+    background-color: #47525e;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: 200ms;
+    outline: 1px solid #c6cad600;
+    .title {
+      margin: 0rem;
+      border: none;
+      padding: 0;
+    }
+
+    .description {
+      margin: 0rem;
+      color: #c6cad6b6;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .tag {
+      color: #c6cad6b6;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #47525ea8;
+      outline: 1px solid #c6cad657;
     }
   }
 }
