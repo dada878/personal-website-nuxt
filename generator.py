@@ -30,6 +30,8 @@ for category in categories:
     posts = os.listdir(f'./content/original/blogs/{category}')
     for post in posts:
         with open(f'./content/original/blogs/{category}/{post}', 'r') as f:
+            if not post.endswith('.md'):
+                continue
             content = f.read()
             title = content.split('\n')[0].replace('# ', '')
             pageID = post.split('.')[0]
@@ -38,7 +40,7 @@ for category in categories:
                 "title": title,
                 "content": content,
                 "category": category,
-                "date": "0 / 0 / 0"
+                "date": "2024 / 01 / 01"
             }
             blogList.append(page_data)
 

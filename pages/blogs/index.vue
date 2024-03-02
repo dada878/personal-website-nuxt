@@ -11,7 +11,7 @@
           :key="post.id"
         >
           <h2 class="title">{{ post.title }}</h2>
-          <p class="description">{{ post.content.replaceAll("\n", "") }}</p>
+          <p class="description">{{ removeMarkdown(post.content) }}</p>
           <span v-if="post.category" class="tag"
             ><font-awesome-icon icon="fa-tag" /> {{ post.category }}</span
           >
@@ -89,6 +89,21 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 library.add(faTag);
+
+function removeMarkdown(str: string) {
+  // remove links
+  str = str.replace(/https?:\/\/\S+/g, "");
+  str = str.replace(/http?:\/\/\S+/g, "");
+  // remove titles
+  str = str.replace(/#+.+/g, "");
+  // remove symbols
+  const symbols = ["#", "*", "_", "`", "!", "[", "]", "(", ")", "<", ">", "&", "/", "\\", "\n", "$"];
+  for (const symbol of symbols) {
+    str = str.replaceAll(symbol, "");
+  }
+  return str;
+}
+
 
 useHead({
   title: "部落格",
