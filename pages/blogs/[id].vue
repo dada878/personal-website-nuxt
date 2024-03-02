@@ -6,6 +6,7 @@
       <h2>推薦文章</h2>
       <div class="posts">
         <nuxt-link
+          @click="clickRecommendation(post.id)"
           v-for="post in recommendation"
           :key="post.id"
           :to="`/blogs/${post.id}`"
@@ -115,6 +116,21 @@ const renderer = md({
 const recommendation = useSearch().query(title.value, 4, false).slice(1, 4);
 
 const renderedContent = ref(renderer.render(content.value));
+
+const gtm = useGtm() // auto-imported by the module
+
+function clickRecommendation(id: string) {
+  // console.log("triggered")
+  gtm?.trackEvent({
+    event: 'click recommendation',
+    category: 'recommendation',
+    action: 'click',
+    label: `clicked recommendation post ${id}`,
+    value: id,
+    noninteraction: false,
+  })
+}
+
 </script>
 <style lang="scss">
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");
