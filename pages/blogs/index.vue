@@ -19,7 +19,7 @@
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .categories {
   overflow-x: scroll;
   display: flex;
