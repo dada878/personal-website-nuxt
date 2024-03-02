@@ -16,6 +16,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
+      - name: clone blog content repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'dada878/blog'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: 'content/original'
       - name: Generate Content
         run: python3 ./generator.py
       - name: Pull Vercel Environment Information
