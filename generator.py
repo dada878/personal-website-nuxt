@@ -28,12 +28,13 @@ def compile_image(content):
 
 for category in categories:
     posts = os.listdir(f'./content/original/blogs/{category}')
-    for postID in posts:
-        with open(f'./content/original/blogs/{category}/{postID}', 'r') as f:
+    for post in posts:
+        with open(f'./content/original/blogs/{category}/{post}', 'r') as f:
             content = f.read()
             title = content.split('\n')[0].replace('# ', '')
+            pageID = post.split('.')[0]
             page_data = {
-                "id": postID,
+                "id": pageID,
                 "title": title,
                 "content": content,
                 "category": category,
