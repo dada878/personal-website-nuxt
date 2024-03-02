@@ -122,10 +122,10 @@ const gtm = useGtm() // auto-imported by the module
 function clickRecommendation(id: string) {
   // console.log("triggered")
   gtm?.trackEvent({
-    event: 'click recommendation',
+    event: 'click-recommendation',
     category: 'recommendation',
     action: 'click',
-    label: `clicked recommendation post ${id}`,
+    label: `Clicked recommendation post ${id}`,
     value: id,
     noninteraction: false,
   })
