@@ -34,8 +34,6 @@ const date = ref("");
 const runtimeConfig = useRuntimeConfig();
 const theme = ref(runtimeConfig.public.production_url + "/css/giscus-theme.css");
 
-console.log(theme.value);
-
 const blog = useBlogList().find(
   (item) => item.id === router.currentRoute.value.params.id
 );
@@ -87,10 +85,24 @@ useHead({
   ],
 });
 
+function removeMarkdown(str: string) {
+  // remove links
+  str = str.replace(/https?:\/\/\S+/g, "");
+  str = str.replace(/http?:\/\/\S+/g, "");
+  // remove titles
+  str = str.replace(/#+.+/g, "");
+  // remove symbols
+  const symbols = ["#", "*", "_", "`", "!", "[", "]", "(", ")", "<", ">", "&", "/", "\\", "\n", "$"];
+  for (const symbol of symbols) {
+    str = str.replaceAll(symbol, "");
+  }
+  return str;
+}
+
 useSeoMeta({
-  description: content.value.replaceAll("\n", " "),
+  description: removeMarkdown(content.value).slice(0, 150),
   ogTitle: title.value + " - 冰川的個人網站",
-  ogDescription: content.value.replaceAll("\n", " "),
+  ogDescription: removeMarkdown(content.value).slice(0, 150),
   ogImage: "https://dada878.com/logo.png",
   ogUrl: () => `https://dada878.com/blogs/${blog!.id}`,
 });
