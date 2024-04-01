@@ -7,16 +7,6 @@
         <div class="line"></div>
       </div>
       <div class="content">
-        <p>國中</p>
-        <p>- 貓咪盃 Scratch 競賽遊戲組全國第 1</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="stepper">
-        <div class="circle"></div>
-        <div class="line"></div>
-      </div>
-      <div class="content">
         <p>高中</p>
         <p>- APCS 檢定實作題 5 級分</p>
         <p>- ISSC 青年程式競賽銅獎</p>
