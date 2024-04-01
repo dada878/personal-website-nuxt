@@ -8,6 +8,8 @@
 </template>
 
 <script setup lang="ts">
+import PageNavbar from "@/components/layout/PageNavbar.vue";
+import PageFooter from "@/components/layout/PageFooter.vue";
 useHead({
   title: "首頁",
   titleTemplate: (title: string) =>

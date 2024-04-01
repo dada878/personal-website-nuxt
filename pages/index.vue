@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts" setup>
-import AboutMe from "@/components/AboutMe.vue";
-import HomeBanner from "@/components/HomeBanner.vue";
+import AboutMe from "@/components/home/AboutMe.vue";
+import HomeBanner from "@/components/home/HomeBanner.vue";
 
 useHead({
   title: "冰川的個人網站",
