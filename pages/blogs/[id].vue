@@ -4,28 +4,26 @@
       <p>最後更新日期 {{ date.replaceAll("/", " / ") }}</p>
       <div class="markdown" v-html="renderedContent"></div>
       <h2>推薦文章</h2>
-      <div class="posts">
-        <nuxt-link
+      <div class="recommendation-posts">
+        <BlogPost
           @click="clickRecommendation(post.id)"
           v-for="post in recommendation"
           :key="post.id"
-          :to="`/blogs/${post.id}`"
-          class="post"
-        >
-          <h2 class="title">{{ post.title }}</h2>
-          <p class="description">{{ removeMarkdown(post.content) }}</p>
-        </nuxt-link>
+          :post="post"
+          class="recommendation"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import "highlight.js/styles/nord.css";
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
 import highlight from "markdown-it-highlightjs";
+import BlogPost from "~/components/blogs/BlogPost.vue";
 import "@/styles/markdown.scss";
+import "highlight.js/styles/nord.css";
 
 const router = useRouter();
 const title = ref("");
@@ -112,7 +110,6 @@ function clickRecommendation(id: string) {
     action: 'click',
     label: `Clicked recommendation post ${id}`,
     value: id,
-    noninteraction: false,
   })
 }
 
@@ -125,6 +122,7 @@ pre > code {
   border-radius: 0.5rem;
   font-family: "Cascadia Code", sans-serif;
   tab-size: 4;
+  
   .hljs-comment {
     color: #9eb8da8c;
   }
@@ -152,45 +150,9 @@ pre > code {
   }
 }
 
-.posts {
+.recommendation-posts {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  .post {
-    text-align: left;
-    padding: 2rem;
-    background-color: #47525e;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: 200ms;
-    outline: 1px solid #c6cad600;
-    .title {
-      margin: 0rem;
-      border: none;
-      padding: 0;
-    }
-
-    .description {
-      margin: 0rem;
-      color: #c6cad6b6;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .tag {
-      color: #c6cad6b6;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: #47525ea8;
-      outline: 1px solid #c6cad657;
-    }
-  }
 }
 </style>

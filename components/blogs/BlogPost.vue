@@ -24,13 +24,25 @@ defineProps<{
   padding: 2rem;
   background-color: #364049;
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   transition: 200ms;
   outline: 1px solid #c6cad600;
+
+  &.recommendation {
+    background-color: #47525e;
+    .tag {
+      display: none;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: #47525ea8;
+      outline: 1px solid #c6cad657;
+    }
+  }
   
   .title {
     margin: 0rem;
