@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post">
-    <div class="content">
+    <div class="content markdown">
       <p>最後更新日期 {{ date.replaceAll("/", " / ") }}</p>
       <div class="markdown" v-html="renderedContent"></div>
       <h2>推薦文章</h2>
@@ -25,6 +25,7 @@ import "highlight.js/styles/nord.css";
 import md from "markdown-it";
 import mathjax from "markdown-it-mathjax3";
 import highlight from "markdown-it-highlightjs";
+import "@/styles/markdown.scss";
 
 const router = useRouter();
 const title = ref("");
@@ -117,7 +118,7 @@ function clickRecommendation(id: string) {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");
 
 pre > code {
@@ -147,52 +148,6 @@ pre > code {
     @media (max-width: 768px) {
       padding: 1.5rem;
       padding-top: 0.5rem;
-    }
-    .markdown > h2, h2 {
-      border-left: 0.4rem solid #e0e2e967;
-      padding-left: 0.5rem;
-      margin-top: 2rem;
-    }
-    .markdown {
-      img {
-        max-width: 100%;
-      }
-      code:not(pre code) {
-        background-color: #62687a9f;
-        border-radius: 0.5rem;
-        padding: 0.2rem;
-        margin: 0rem;
-      }
-      blockquote {
-        overflow-x: scroll;
-        background-color: #62687a9f;
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin: 0rem;
-        position: relative;
-        border-top: 0.5rem solid #e0e2e949;
-        p {
-          margin: 0rem;
-        }
-      }
-      a {
-        color: rgb(125, 205, 211);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        border-bottom: 2px solid #e0e2e967;
-        padding-bottom: 1rem;
-      }
-      table,
-      th,
-      td {
-        border: 1px solid #a3b4be8e;
-        border-collapse: collapse;
-        padding: 0.5rem;
-      }
     }
   }
 }

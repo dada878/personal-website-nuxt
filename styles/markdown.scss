@@ -1,0 +1,46 @@
+.markdown > h2 {
+  border-left: 0.4rem solid #e0e2e967;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+}
+.markdown {
+  img {
+    max-width: 100%;
+  }
+  code:not(pre code) {
+    background-color: #62687a9f;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    margin: 0rem;
+  }
+  blockquote {
+    overflow-x: scroll;
+    background-color: #62687a9f;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0rem;
+    position: relative;
+    border-top: 0.5rem solid #e0e2e949;
+    p {
+      margin: 0rem;
+    }
+  }
+  a {
+    color: rgb(125, 205, 211);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  h1 {
+    border-bottom: 2px solid #e0e2e967;
+    padding-bottom: 1rem;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid #a3b4be8e;
+    border-collapse: collapse;
+    padding: 0.5rem;
+  }
+}
