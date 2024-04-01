@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
-import { installNuxtSiteConfig, updateSiteConfig } from "nuxt-site-config-kit";
+import { installNuxtSiteConfig } from "nuxt-site-config-kit";
 import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
 export default defineNuxtConfig({
