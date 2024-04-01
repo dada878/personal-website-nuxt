@@ -10,38 +10,40 @@
 <script setup lang="ts">
 useHead({
   title: "首頁",
-  titleTemplate: (title: string) => (title ? `${title} - 冰川的個人網站` : '冰川的個人網站'),
+  titleTemplate: (title: string) =>
+    title ? `${title} - 冰川的個人網站` : "冰川的個人網站",
   htmlAttrs: { lang: "zh-TW" },
   link: [
     {
-      rel: 'icon',
-      href: '/favicon.ico'
-    }
-  ]
+      rel: "icon",
+      href: "/favicon.ico",
+    },
+  ],
 });
 
 useSeoMeta({
-  description: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+  description:
+    "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
   ogTitle: "冰川的個人網站",
-  ogDescription: "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
+  ogDescription:
+    "歡迎來到冰川的個人網站！你可以在這裡找到我的作品、部落格、以及聯絡方式～",
   ogUrl: "https://dada878.com",
   ogImage: "https://dada878.com/logo.png",
 });
 
 useSchemaOrg([
   definePerson({
-    name: '冰川'
+    name: "冰川",
   }),
   defineWebSite({
-    name: '冰川的個人網站',
+    name: "冰川的個人網站",
   }),
   defineWebPage(),
 ]);
 </script>
 
 <style lang="scss">
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 
 .page-container {
   padding: 2rem calc(20vw + 1rem);
@@ -76,7 +78,8 @@ body {
   overflow-x: hidden;
   background-color: #47525e;
   overflow-y: overlay;
-  font-family: "Noto Sans TC", Tahoma, Helvetica, Arial, "Microsoft Yahei", STXihei, sans-serif;
+  font-family: "Noto Sans TC", Tahoma, Helvetica, Arial, "Microsoft Yahei",
+    STXihei, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

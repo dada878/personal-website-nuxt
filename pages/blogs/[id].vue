@@ -29,8 +29,6 @@ const router = useRouter();
 const title = ref("");
 const content = ref("");
 const date = ref("");
-const runtimeConfig = useRuntimeConfig();
-const theme = ref(runtimeConfig.public.production_url + "/css/giscus-theme.css");
 
 const blog = useBlogList().find(
   (item) => item.id === router.currentRoute.value.params.id
@@ -83,20 +81,6 @@ useHead({
   ],
 });
 
-function removeMarkdown(str: string) {
-  // remove links
-  str = str.replace(/https?:\/\/\S+/g, "");
-  str = str.replace(/http?:\/\/\S+/g, "");
-  // remove titles
-  str = str.replace(/#+.+/g, "");
-  // remove symbols
-  const symbols = ["#", "*", "_", "`", "!", "[", "]", "(", ")", "<", ">", "&", "/", "\\", "\n", "$"];
-  for (const symbol of symbols) {
-    str = str.replaceAll(symbol, "");
-  }
-  return str;
-}
-
 useSeoMeta({
   description: removeMarkdown(content.value).slice(0, 150),
   ogTitle: title.value + " - 冰川的個人網站",
@@ -117,12 +101,11 @@ const recommendation = useSearch().query(title.value, 4, false).slice(1, 4);
 
 const renderedContent = ref(renderer.render(content.value));
 
-const gtm = useGtm() // auto-imported by the module
+const gtm = useGtm()
 
 function clickRecommendation(id: string) {
-  // console.log("triggered")
   gtm?.trackEvent({
-    event: 'click-recommendation',
+    event: `click-recommendation`,
     category: 'recommendation',
     action: 'click',
     label: `Clicked recommendation post ${id}`,

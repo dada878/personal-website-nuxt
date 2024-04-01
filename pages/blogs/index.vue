@@ -19,6 +19,73 @@
     </div>
   </div>
 </template>
+<script lang="ts" setup>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
+// import { Post } from"@/types/post";
+library.add(faTag);
+
+useHead({
+  title: "部落格",
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "部落格",
+            item: "https://dada878.com/blogs",
+          },
+        ],
+      }),
+    },
+  ],
+});
+
+useSeoMeta({
+  description: "你可以在這裡找到我的部落格文章 ><",
+  ogTitle: "部落格 - 冰川的個人網站",
+  ogDescription: "你可以在這裡找到我的部落格文章 ><",
+  ogImage: "https://dada878.com/logo.png",
+  ogUrl: () => `https://dada878.com/blogs`,
+});
+
+const blogList: Ref<Array<Post>> = ref([]);
+const router = useRouter();
+
+function goCategory(category: string) {
+  if (category === "All") {
+    router.push(`/blogs`);
+  } else {
+    router.push(`/blogs?category=${category}`);
+  }
+  updateRenderResult(category);
+}
+
+function updateRenderResult(category: string) {
+  if (category === "All") {
+    category = "";
+  }
+  blogList.value = useBlogList().filter((post) => {
+    if (category) {
+      return post.category === category;
+    } else {
+      return true;
+    }
+  }).sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+}
+
+updateRenderResult(useRoute().query.category as string);
+
+const categories = ref(["All", ...new Set(useBlogList().map((post) => post.category))]);
+
+</script>
 <style lang="scss" scoped>
 .categories {
   overflow-x: scroll;
@@ -85,95 +152,3 @@
   }
 }
 </style>
-<script lang="ts" setup>
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTag } from "@fortawesome/free-solid-svg-icons";
-library.add(faTag);
-
-function removeMarkdown(str: string) {
-  // remove links
-  str = str.replace(/https?:\/\/\S+/g, "");
-  str = str.replace(/http?:\/\/\S+/g, "");
-  // remove titles
-  str = str.replace(/#+.+/g, "");
-  // remove symbols
-  const symbols = ["#", "*", "_", "`", "!", "[", "]", "(", ")", "<", ">", "&", "/", "\\", "\n", "$"];
-  for (const symbol of symbols) {
-    str = str.replaceAll(symbol, "");
-  }
-  return str;
-}
-
-
-useHead({
-  title: "部落格",
-  script: [
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "部落格",
-            item: "https://dada878.com/blogs",
-          },
-        ],
-      }),
-    },
-  ],
-});
-
-useSeoMeta({
-  description: "你可以在這裡找到我的部落格文章 ><",
-  ogTitle: "部落格 - 冰川的個人網站",
-  ogDescription: "你可以在這裡找到我的部落格文章 ><",
-  ogImage: "https://dada878.com/logo.png",
-  ogUrl: () => `https://dada878.com/blogs`,
-});
-
-interface Post {
-  id: string;
-  title: string;
-  content: string;
-  date: string;
-  category: string | null;
-}
-
-const blogList: Ref<Array<Post>> = ref([]);
-const router = useRouter();
-
-function goCategory(category: string) {
-  if (category === "All") {
-    router.push(`/blogs`);
-  } else {
-    router.push(`/blogs?category=${category}`);
-  }
-  updateRenderResult(category);
-}
-
-function updateRenderResult(category: string) {
-  if (category === "All") {
-    category = "";
-  }
-  blogList.value = useBlogList().filter((post) => {
-    if (category) {
-      return post.category === category;
-    } else {
-      return true;
-    }
-  }).sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-}
-
-updateRenderResult(useRoute().query.category as string);
-
-const categories = ref(["All", ...new Set(useBlogList().map((post) => post.category))]);
-
-const goBlogPost = (id: string) => {
-  router.push(`/blogs/${id}`);
-};
-</script>

@@ -12,7 +12,11 @@
         type="text"
         placeholder="搜尋文章..."
       />
-      <font-awesome-icon @click="toggleSearchBar" class="search-icon" icon="fa-solid fa-search" />
+      <font-awesome-icon
+        @click="toggleSearchBar"
+        class="search-icon"
+        icon="fa-solid fa-search"
+      />
       <div class="suggestion-box">
         <a
           class="suggestion-item"
@@ -39,15 +43,6 @@ function toggleSearchBar() {
   isSearchBarOpened = !isSearchBarOpened;
   searchBarOpacity.value = isSearchBarOpened == true ? 1 : 0;
   searchBarPointerEvent.value = isSearchBarOpened == true ? "all" : "none";
-}
-
-interface Post {
-  id: string;
-  title: string;
-  content: string;
-  category: string | null;
-  url: string;
-  date: string;
 }
 
 const searchResult: Ref<Array<Post>> = ref([]);

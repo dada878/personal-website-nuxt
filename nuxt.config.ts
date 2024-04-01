@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
-import projects from "./content/projects.json";
 import { installNuxtSiteConfig, updateSiteConfig } from "nuxt-site-config-kit";
 import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
@@ -13,20 +12,15 @@ export default defineNuxtConfig({
           : "https://dada878.com",
       production_url: "https://dada878.com",
       gtm: {
-        id: 'GTM-KLBPLFSQ',
+        id: "GTM-KLBPLFSQ",
         enabled: true,
         debug: true,
         devtools: true,
-      }
+      },
     },
   },
   async setup(options) {
     await installNuxtSiteConfig();
-  },
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) => ["giscus-widget"].includes(tag),
-    },
   },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
@@ -58,21 +52,12 @@ export default defineNuxtConfig({
   },
   sitemap: {
     urls: async () => {
-      return blogs
-        .map((page) => ({
-          loc: `/blogs/${page.id}`,
-          lastmod: Date().toString(),
-          changefreq: "daily",
-          priority: 0.8,
-        }))
-        .concat(
-          projects.map((page) => ({
-            loc: `/projects/${page.id}`,
-            lastmod: Date().toString(),
-            changefreq: "daily",
-            priority: 0.8,
-          }))
-        ) as SitemapEntryInput[];
+      return blogs.map((page) => ({
+        loc: `/blogs/${page.id}`,
+        lastmod: Date().toString(),
+        changefreq: "daily",
+        priority: 0.8,
+      })) as SitemapEntryInput[];
     },
   },
   generate: {
@@ -80,11 +65,13 @@ export default defineNuxtConfig({
       "/blogs",
       "/projects",
       ...blogs.map((item) => `/blogs/${item.id}`),
-      ...projects.map((item) => `/projects/${item.id}`),
     ],
   },
   robots: {
-    allow: ['/blogs/*', '/projects/*'],
-    disallow: ['/blogs', '/projects'],
+    allow: ["/blogs/*"],
+    disallow: ["/blogs"],
+  },
+  imports: {
+    dirs: ['types/*.ts'],
   },
 });

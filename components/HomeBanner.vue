@@ -5,13 +5,25 @@
       <h2 class="subtitle">從零親手打造的小網站</h2>
     </div>
     <div class="links">
-      <a target="_blank" href="https://github.com/dada878" aria-label="github link">
+      <a
+        target="_blank"
+        href="https://github.com/dada878"
+        aria-label="github link"
+      >
         <font-awesome-icon icon="fa-brands fa-github" />
       </a>
-      <a target="_blank" href="https://discordapp.com/users/611118369474740244/"  aria-label="discord link">
+      <a
+        target="_blank"
+        href="https://discordapp.com/users/611118369474740244/"
+        aria-label="discord link"
+      >
         <font-awesome-icon icon="fa-brands fa-discord" />
       </a>
-      <a target="_blank" href="mailto:xx0932399@gmail.com"  aria-label="gmail link">
+      <a
+        target="_blank"
+        href="mailto:xx0932399@gmail.com"
+        aria-label="gmail link"
+      >
         <font-awesome-icon icon="fa-solid fa-envelope" />
       </a>
     </div>
@@ -19,9 +31,9 @@
 </template>
 
 <script lang="ts" setup>
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faDiscord, } from '@fortawesome/free-brands-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
 library.add(faGithub, faDiscord, faEnvelope);
 </script>
 
@@ -44,7 +56,7 @@ library.add(faGithub, faDiscord, faEnvelope);
 
   .subtitle {
     font-weight: 400;
-    animation: fade-in 700ms .5s forwards;
+    animation: fade-in 700ms 0.5s forwards;
     font-size: calc(1rem + 1vw);
     margin: 0rem;
     opacity: 0;
@@ -94,5 +106,4 @@ library.add(faGithub, faDiscord, faEnvelope);
     opacity: 1;
   }
 }
-
 </style>

@@ -1,24 +1,10 @@
-import projects from "@/content/projects.json";
 import blogs from "@/content/blogs.json";
-
-interface Post {
-  id: string;
-  title: string;
-  content: string;
-  category: string | null;
-  date: string;
-  url: string;
-}
 
 const pages: Array<Post> = [
   ...blogs.map((item) => ({
     ...item,
     url: `/blogs/${item.id}`,
   })),
-  // ...projects.map((item) => ({
-  //   ...item,
-  //   url: `/projects/${item.id}`,
-  // })),
 ];
 
 function longestCommonSubstring(s1: string, s2: string) {

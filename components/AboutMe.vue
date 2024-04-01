@@ -1,35 +1,35 @@
 <template>
-    <div class="aboutme">
-        <HistoryCard class="about-card history"></HistoryCard>
-        <AboutCard class="about-card about"></AboutCard>
-        <SkillCard class="about-card skills"></SkillCard>
-    </div>
+  <div class="about-me">
+    <HistoryCard class="about-card history"></HistoryCard>
+    <AboutCard class="about-card about"></AboutCard>
+    <SkillCard class="about-card skills"></SkillCard>
+  </div>
 </template>
-  
+
 <script lang="ts" setup>
-import HistoryCard from './HistoryCard.vue';
-import AboutCard from './AboutCard.vue';
-import SkillCard from './SkillCard.vue';
+import HistoryCard from "./HistoryCard.vue";
+import AboutCard from "./AboutCard.vue";
+import SkillCard from "./SkillCard.vue";
 </script>
-  
+
 <style scoped lang="scss">
 .about-card {
-    animation: fade-up 700ms forwards;
+  animation: fade-up 700ms forwards;
 }
 
 @keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(1rem);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0rem);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 }
 
-.aboutme {
+.about-me {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -41,7 +41,7 @@ import SkillCard from './SkillCard.vue';
   padding-right: 7rem;
 }
 
-.aboutme>* {
+.about-me > * {
   background-color: #364049;
   border-radius: 1rem;
   padding-left: 1rem;
@@ -49,7 +49,7 @@ import SkillCard from './SkillCard.vue';
   overflow: hidden;
 }
 
-.aboutme>h1 {
+.about-me > h1 {
   font-weight: 400;
   font-size: calc(1rem + 1vw);
 }
@@ -67,21 +67,20 @@ import SkillCard from './SkillCard.vue';
 }
 
 @media screen and (max-width: 1165px) {
-  .aboutme {
+  .about-me {
     padding: 2rem;
   }
 }
 
 /* 手機 RWD */
 @media screen and (max-width: 986px) {
-  .aboutme {
+  .about-me {
     display: block;
     padding: 2rem;
   }
 
-  .aboutme>* {
+  .about-me > * {
     margin-bottom: 2rem;
   }
 }
 </style>
-  
