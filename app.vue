@@ -12,7 +12,7 @@ import PageNavbar from "@/components/layout/PageNavbar.vue";
 import PageFooter from "@/components/layout/PageFooter.vue";
 useHead({
   title: "首頁",
-  titleTemplate: (title: string) =>
+  titleTemplate:(title: string) =>
     title ? `${title} - 冰川的個人網站` : "冰川的個人網站",
   htmlAttrs: { lang: "zh-TW" },
   link: [
