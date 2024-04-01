@@ -30,6 +30,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -41,8 +42,8 @@ let searchBarPointerEvent = ref("none");
 
 function toggleSearchBar() {
   isSearchBarOpened = !isSearchBarOpened;
-  searchBarOpacity.value = isSearchBarOpened == true ? 1 : 0;
-  searchBarPointerEvent.value = isSearchBarOpened == true ? "all" : "none";
+  searchBarOpacity.value = isSearchBarOpened === true ? 1 : 0;
+  searchBarPointerEvent.value = isSearchBarOpened === true ? "all" : "none";
 }
 
 const searchResult: Ref<Array<Post>> = ref([]);
@@ -59,6 +60,7 @@ function updateSearchResult(event: Event) {
   searchResult.value = useSearch().query(keyword);
 }
 </script>
+
 <style lang="scss" scoped>
 .logo {
   margin-right: 0.2rem;
