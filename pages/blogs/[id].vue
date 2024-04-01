@@ -19,6 +19,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import "highlight.js/styles/nord.css";
 import md from "markdown-it";
@@ -115,6 +116,7 @@ function clickRecommendation(id: string) {
 }
 
 </script>
+
 <style lang="scss">
 @import url("https://fonts.cdnfonts.com/css/cascadia-code");
 

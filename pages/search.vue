@@ -13,6 +13,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
@@ -51,6 +52,7 @@ useHead({
   ],
 });
 </script>
+
 <style lang="scss" scoped>
 .search-result-title {
   margin-top: 0rem;

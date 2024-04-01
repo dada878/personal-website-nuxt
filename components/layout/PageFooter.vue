@@ -3,7 +3,7 @@
     <p>© Copyright 2023 dada878.com</p>
   </div>
 </template>
-<script lang="ts" setup></script>
+
 <style lang="scss" scoped>
 .footer {
   background-color: #364049;

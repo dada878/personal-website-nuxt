@@ -25,6 +25,7 @@
     </div>
   </section>
 </template>
+
 <style lang="scss" scoped>
 .step {
   padding: 10px;

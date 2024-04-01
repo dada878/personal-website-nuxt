@@ -20,6 +20,19 @@
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faGithub,
+  faDiscord,
+  faHtml5,
+  faUnity,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
+library.add(faGithub, faDiscord, faHtml5, faUnity, faPython);
+</script>
+
 <style lang="scss" scoped>
 .skills {
   .skill-cards {
@@ -79,14 +92,3 @@
   }
 }
 </style>
-<script lang="ts" setup>
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faGithub,
-  faDiscord,
-  faHtml5,
-  faUnity,
-  faPython,
-} from "@fortawesome/free-brands-svg-icons";
-library.add(faGithub, faDiscord, faHtml5, faUnity, faPython);
-</script>

@@ -12,6 +12,7 @@
     <p>目前 Codeforces Rating: {{ rating }}</p>
   </section>
 </template>
+
 <script lang="ts" setup>
 import { ref } from "vue";
 

@@ -19,6 +19,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
@@ -86,6 +87,7 @@ updateRenderResult(useRoute().query.category as string);
 const categories = ref(["All", ...new Set(useBlogList().map((post) => post.category))]);
 
 </script>
+
 <style lang="scss" scoped>
 .categories {
   overflow-x: scroll;
