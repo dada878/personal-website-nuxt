@@ -1,16 +1,22 @@
 <template>
   <div class="page-container">
     <div class="categories">
-      <span @click="goCategory(item)" class="category-item" v-for="item in categories">{{ item }}</span>
+      <CategoryItem
+        v-for="category in categories"
+        :key="category"
+        :item="category"
+        @click="goCategory(category)"
+      />
     </div>
     <div class="posts">
-        <BlogPost v-for="post in blogList" :key="post.title" :post="post" />
+      <BlogPost v-for="post in blogList" :key="post.title" :post="post" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import BlogPost from "~/components/blogs/BlogPost.vue";
+import CategoryItem from "~/components/blogs/CategoryItem.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 library.add(faTag);
@@ -47,6 +53,23 @@ useSeoMeta({
 const blogList: Ref<Array<Post>> = ref([]);
 const router = useRouter();
 
+function updateRenderResult(category: string) {
+  if (category === "All") {
+    category = "";
+  }
+  blogList.value = useBlogList()
+    .filter((post) => {
+      if (category) {
+        return post.category === category;
+      } else {
+        return true;
+      }
+    })
+    .sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+}
+
 function goCategory(category: string) {
   if (category === "All") {
     router.push(`/blogs`);
@@ -56,25 +79,12 @@ function goCategory(category: string) {
   updateRenderResult(category);
 }
 
-function updateRenderResult(category: string) {
-  if (category === "All") {
-    category = "";
-  }
-  blogList.value = useBlogList().filter((post) => {
-    if (category) {
-      return post.category === category;
-    } else {
-      return true;
-    }
-  }).sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-}
-
 updateRenderResult(useRoute().query.category as string);
 
-const categories = ref(["All", ...new Set(useBlogList().map((post) => post.category))]);
-
+const categories = ref([
+  "All",
+  ...new Set(useBlogList().map((post) => post.category)),
+]);
 </script>
 
 <style lang="scss" scoped>
@@ -86,19 +96,6 @@ const categories = ref(["All", ...new Set(useBlogList().map((post) => post.categ
   padding: 0.1rem;
   gap: 1rem;
   scrollbar-width: none;
-  .category-item {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: #364049;
-    color: #c6cad6;
-    outline: 1px solid transparent;
-    transition: 200ms;
-    &:hover {
-      cursor: pointer;
-      outline: 1px solid rgba(198, 202, 214, 0.3411764706);
-      background-color: #364049b0;
-    }
-  }
   &::-webkit-scrollbar {
     display: none;
   }

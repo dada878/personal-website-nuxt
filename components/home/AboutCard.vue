@@ -47,6 +47,7 @@ fetch("https://codeforces.com/api/user.info?handles=dada878")
     rating.value = res.result[0].rating;
   });
 </script>
+
 <style lang="scss" scoped>
 .about {
   padding-bottom: 2rem;

@@ -1,9 +1,9 @@
 <template>
-  <nuxt-link :to="'/blogs/' + props.post.id" class="post">
-    <h2 class="title">{{ props.post.title }}</h2>
-    <p class="description">{{ removeMarkdown(props.post.content) }}</p>
+  <nuxt-link :to="'/blogs/' + post.id" class="post">
+    <h2 class="title">{{ post.title }}</h2>
+    <p class="description">{{ removeMarkdown(post.content) }}</p>
     <span v-if="post.category" class="tag"
-      ><font-awesome-icon icon="fa-tag" /> {{ props.post.category }}</span
+      ><font-awesome-icon icon="fa-tag" /> {{ post.category }}</span
     >
   </nuxt-link>
 </template>
@@ -13,7 +13,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 library.add(faTag);
 
-const props = defineProps<{
+defineProps<{
   post: Post;
 }>();
 </script>
@@ -31,6 +31,7 @@ const props = defineProps<{
   gap: 1rem;
   transition: 200ms;
   outline: 1px solid #c6cad600;
+  
   .title {
     margin: 0rem;
   }
