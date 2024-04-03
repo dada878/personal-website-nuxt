@@ -30,11 +30,12 @@ function longestCommonSubstring(s1: string, s2: string) {
 export const useSearch = () => {
   return {
     query(
-      keyword: string,
+      queryKeyword?: string,
       resultCount: number = 5,
       mustMatch: boolean = false,
     ) {
-      keyword = keyword.toLowerCase();
+      if (typeof queryKeyword != "string") return [];
+      const keyword = queryKeyword?.toLowerCase()?.trim();
       const filteredPages = mustMatch
         ? pages.filter(
             (page) =>
