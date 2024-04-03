@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 function calculateAge() {
   const birthday: Date = new Date(2007, 0, 22);
@@ -29,9 +29,11 @@ const currentHour = new Date().getHours();
 const currentAge: Ref<string> = ref(calculateAge());
 const rating = ref(0);
 
-setInterval(() => {
-  currentAge.value = calculateAge();
-}, 1);
+onMounted(() => {
+  setInterval(() => {
+    currentAge.value = calculateAge();
+  }, 1);
+});
 
 if (currentHour > 4 && currentHour < 12) {
   greeting.value = "早安";

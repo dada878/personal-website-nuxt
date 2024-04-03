@@ -13,6 +13,10 @@
   </nav>
 </template>
 
+<script setup>
+import SearchBox from "@/components/global/SearchBox.vue";
+</script>
+
 <style lang="scss">
 .search-box {
   flex: 1;
