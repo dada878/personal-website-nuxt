@@ -1,18 +1,15 @@
 <template>
   <NuxtLoadingIndicator color="#6ba2db" :throttle="0" :height="3" />
-  <div>
-    <PageNavbar />
+  <NuxtLayout>
     <NuxtPage />
-    <PageFooter />
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import PageNavbar from "@/components/layout/PageNavbar.vue";
-import PageFooter from "@/components/layout/PageFooter.vue";
 useHead({
   title: "首頁",
-  titleTemplate:(title: string) =>
+  // @ts-ignore
+  titleTemplate: (title: string) =>
     title ? `${title} - 冰川的個人網站` : "冰川的個人網站",
   htmlAttrs: { lang: "zh-TW" },
   link: [

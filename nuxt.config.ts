@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   // @ts-ignore
   async setup(options) {
-    await installNuxtSiteConfig()
+    await installNuxtSiteConfig();
   },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "nuxt-seo-ui",
     "@zadigetvoltaire/nuxt-gtm",
-    '@nuxtjs/sitemap'
+    "@nuxtjs/sitemap",
   ],
   site: {
     name: "冰川的個人網站",
@@ -61,16 +61,13 @@ export default defineNuxtConfig({
     },
   },
   generate: {
-    routes: [
-      "/blogs",
-      ...blogs.map((item) => `/blogs/${item.id}`),
-    ],
+    routes: ["/blogs", ...blogs.map((item) => `/blogs/${item.id}`)],
   },
   robots: {
     allow: ["/blogs/*"],
     disallow: ["/blogs"],
   },
   imports: {
-    dirs: ['types/*.ts'],
+    dirs: ["types/*.ts"],
   },
 });
