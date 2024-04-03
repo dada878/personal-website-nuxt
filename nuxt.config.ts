@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import blogs from "./content/blogs.json";
 import { installNuxtSiteConfig } from "nuxt-site-config-kit";
-import { SitemapEntryInput } from "nuxt-simple-sitemap/dist/runtime/types";
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -19,8 +18,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  // @ts-ignore
   async setup(options) {
-    await installNuxtSiteConfig();
+    await installNuxtSiteConfig()
   },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
@@ -34,11 +34,11 @@ export default defineNuxtConfig({
     ],
   },
   modules: [
-    "nuxt-simple-sitemap",
     "nuxt-simple-robots",
     "nuxt-schema-org",
     "nuxt-seo-ui",
     "@zadigetvoltaire/nuxt-gtm",
+    '@nuxtjs/sitemap'
   ],
   site: {
     name: "冰川的個人網站",
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
         lastmod: Date().toString(),
         changefreq: "daily",
         priority: 0.8,
-      })) as SitemapEntryInput[];
+      }));
     },
   },
   generate: {
