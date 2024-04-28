@@ -43,5 +43,10 @@
         "name": "合成大箱子",
         "url": "https://www.youtube.com/watch?v=A_tXh_9JpP0",
         "image": "/projects/merge-box.png"
+    },
+    {
+        "name": "AI 生成劇情的文字冒險遊戲",
+        "url": "https://github.com/dada878/ai-text-game",
+        "image": "/projects/ai-text-game.png"
     }
 ]
