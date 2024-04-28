@@ -8,6 +8,9 @@
       <li>
         <nuxt-link to="/blogs">部落格</nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/projects">作品集</nuxt-link>
+      </li>
     </ul>
     <div class="right-side"></div>
   </nav>

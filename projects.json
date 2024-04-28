@@ -1,0 +1,47 @@
+[
+    {
+        "name": "鞋子網站",
+        "url": "https://shoes.dada878.com",
+        "image": "/projects/shoes.png"
+    },
+    {
+        "name": "個人網站",
+        "url": "https://dada878.com",
+        "image": "/projects/personal-website.png"
+    },
+    {
+        "name": "番茄鐘",
+        "url": "https://timer.dada878.com/",
+        "image": "/projects/pomodoro-timer.png"
+    },
+    {
+        "name": "SCINT 官網",
+        "url": "https://scint.org",
+        "image": "/projects/scint.png"
+    },
+    {
+        "name": "CSES Helper",
+        "url": "https://chromewebstore.google.com/detail/cses-helper/ncenmkbjgidphaobkklmhhgnakcgmghi",
+        "image": "/projects/cses-helper.png"
+    },
+    {
+        "name": "Dcard 實習作業",
+        "url": "https://dcard-homework-tawny.vercel.app/",
+        "image": "/projects/dcard-homework.png"
+    },
+    {
+        "name": "Minecraft 基岩版模組製作工具",
+        "url":"https://dada878.github.io/blockly-gametest-tester/",
+        "image": "/projects/gametest-blockly.png"
+    },
+    {
+        "name": "迷你跑酷",
+        "url": "https://youtu.be/onEt-U5o3Cc?si=1E3_Fjj10oxp3vId",
+        "image": "/projects/mini-parkour.png"
+    },
+    {
+        "name": "合成大箱子",
+        "url": "https://www.youtube.com/watch?v=A_tXh_9JpP0",
+        "image": "/projects/merge-box.png"
+    }
+]
