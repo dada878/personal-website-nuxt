@@ -24,7 +24,12 @@
         href="mailto:xx0932399@gmail.com"
         aria-label="gmail link"
       >
-        <font-awesome-icon icon="fa-solid fa-envelope" />
+      <a
+        target="_blank"
+        href="https://www.youtube.com/channel/UCoIyvDVUbE-9g6A7AtL7aBQ"
+        aria-label="youtube link"
+      ></a>
+        <font-awesome-icon icon="fa-solid fa-youtube" />
       </a>
     </div>
   </div>
@@ -33,8 +38,8 @@
 <script lang="ts" setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
-library.add(faGithub, faDiscord, faEnvelope);
+import { faGithub, faDiscord, faYoutube } from "@fortawesome/free-brands-svg-icons";
+library.add(faGithub, faDiscord, faEnvelope, faYoutube);
 </script>
 
 <style scoped lang="scss">
@@ -81,6 +86,9 @@ library.add(faGithub, faDiscord, faEnvelope);
       }
       &:nth-child(3) {
         animation: fade-in 700ms 1.6s forwards;
+      }
+      &:nth-child(4) {
+        animation: fade-in 700ms 1.8s forwards;
       }
       color: #dfe1e8;
       opacity: 0;
