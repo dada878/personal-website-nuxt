@@ -24,12 +24,14 @@
         href="mailto:xx0932399@gmail.com"
         aria-label="gmail link"
       >
+      <font-awesome-icon icon="fa-solid fa-envelope" />
+    </a>
       <a
         target="_blank"
         href="https://www.youtube.com/channel/UCoIyvDVUbE-9g6A7AtL7aBQ"
         aria-label="youtube link"
-      ></a>
-        <font-awesome-icon icon="fa-solid fa-youtube" />
+      >
+        <font-awesome-icon icon="fa-brands fa-youtube" />
       </a>
     </div>
   </div>
