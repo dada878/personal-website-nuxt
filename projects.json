@@ -48,5 +48,15 @@
         "name": "AI 生成劇情的文字冒險遊戲",
         "url": "https://github.com/dada878/ai-text-game",
         "image": "/projects/ai-text-game.png"
+    },
+    {
+        "name": "Sprout OJ Toolkit",
+        "url": "https://chromewebstore.google.com/detail/sprout-oj-toolkit/mngkdlgnpkmofanhnanbbmpdopgpamhd",
+        "image": "/projects/sprout-oj-toolkit.png"
+    },
+    {
+        "name": "基岩版 rawtext 指令生成器",
+        "url": "https://command.dada878.com/",
+        "image": "/projects/rawtext-generator.png"
     }
 ]
