@@ -4,12 +4,42 @@
       <a target="_blank" :href="project.url">
         <img :src="project.image" alt="project image" />
         <p>{{ project.name }}</p>
+        <div class="tech-stack">
+          <font-awesome-icon
+            v-for="item in project.techs"
+            :icon="`fa-brands fa-${item}`"
+            class="icon"
+          />
+        </div>
       </a>
     </div>
   </div>
 </template>
 <script setup>
 import projects from "@/projects.json";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faGithub,
+  faDiscord,
+  faYoutube,
+  faReact,
+  faVuejs,
+  faHtml5,
+  faCss3,
+  faUnity,
+  faJs,
+} from "@fortawesome/free-brands-svg-icons";
+library.add(
+  faGithub,
+  faDiscord,
+  faYoutube,
+  faReact,
+  faVuejs,
+  faHtml5,
+  faCss3,
+  faUnity,
+  faJs
+);
 </script>
 <style scoped lang="scss">
 .project-container {
@@ -30,6 +60,21 @@ import projects from "@/projects.json";
     color: #c6cad6;
     transition: 200ms;
 
+    .tech-stack {
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      
+      .icon {
+        padding: 0.5rem;
+        border-radius: 1rem;
+        color: #c6cad6;
+        text-decoration: none;
+        background-color: #46535e;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
     a {
       text-decoration: none;
       display: flex;
@@ -47,6 +92,7 @@ import projects from "@/projects.json";
       width: 100%;
       height: 170px;
       border-radius: 0.5rem;
+      object-fit: cover;
     }
 
     &:hover {

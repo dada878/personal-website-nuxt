@@ -2,61 +2,79 @@
     {
         "name": "鞋子網站",
         "url": "https://shoes.dada878.com",
-        "image": "/projects/shoes.png"
+        "image": "/projects/shoes.png",
+        "techs": ["vuejs", "html5", "css3", "js"]
     },
     {
         "name": "個人網站",
         "url": "https://dada878.com",
-        "image": "/projects/personal-website.png"
+        "image": "/projects/personal-website.png",
+        "techs": ["vuejs", "html5", "css3", "js"]
     },
     {
         "name": "番茄鐘",
         "url": "https://timer.dada878.com/",
-        "image": "/projects/pomodoro-timer.png"
+        "image": "/projects/pomodoro-timer.png",
+        "techs": ["vuejs", "html5", "css3", "js"]
     },
     {
         "name": "SCINT 官網",
         "url": "https://scint.org",
-        "image": "/projects/scint.png"
+        "image": "/projects/scint.png",
+        "techs": ["html5", "css3", "js"]
     },
     {
         "name": "CSES Helper",
         "url": "https://chromewebstore.google.com/detail/cses-helper/ncenmkbjgidphaobkklmhhgnakcgmghi",
-        "image": "/projects/cses-helper.png"
+        "image": "/projects/cses-helper.png",
+        "techs": ["html5", "css3", "js"]
     },
     {
         "name": "Dcard 實習作業",
         "url": "https://dcard-homework-tawny.vercel.app/",
-        "image": "/projects/dcard-homework.png"
+        "image": "/projects/dcard-homework.png",
+        "techs": ["react", "html5", "css3", "js"]
     },
     {
         "name": "Minecraft 基岩版模組製作工具",
         "url":"https://dada878.github.io/blockly-gametest-tester/",
-        "image": "/projects/gametest-blockly.png"
+        "image": "/projects/gametest-blockly.png",
+        "techs": ["html5", "css3", "js"]
     },
     {
         "name": "迷你跑酷",
         "url": "https://youtu.be/onEt-U5o3Cc?si=1E3_Fjj10oxp3vId",
-        "image": "/projects/mini-parkour.png"
+        "image": "/projects/mini-parkour.png",
+        "techs": ["unity"]
     },
     {
         "name": "合成大箱子",
         "url": "https://www.youtube.com/watch?v=A_tXh_9JpP0",
-        "image": "/projects/merge-box.png"
+        "image": "/projects/merge-box.png",
+        "techs": ["unity"]
     },
     {
         "name": "AI 生成劇情的文字冒險遊戲",
         "url": "https://github.com/dada878/ai-text-game",
-        "image": "/projects/ai-text-game.png"
+        "image": "/projects/ai-text-game.png",
+        "techs": ["vuejs", "html5", "css3", "js"]
     },
     {
         "name": "Sprout OJ Toolkit",
         "url": "https://chromewebstore.google.com/detail/sprout-oj-toolkit/mngkdlgnpkmofanhnanbbmpdopgpamhd",
-        "image": "/projects/sprout-oj-toolkit.png"
+        "image": "/projects/sprout-oj-toolkit.png",
+        "techs": ["html5", "css3", "js"]
     },
     {
         "name": "基岩版 rawtext 指令生成器",
         "url": "https://command.dada878.com/",
-        "image": "/projects/rawtext-generator.png"
+        "image": "/projects/rawtext-generator.png",
+        "techs": ["react", "html5", "css3", "js"]
+    },
+    {
+        "name": "白日夢工作室官網",
+        "url": "https://daydream-official-website.vercel.app/",
+        "image": "/projects/daydream.png",
+        "techs": ["react", "html5", "css3", "js"]
     }
 ]
