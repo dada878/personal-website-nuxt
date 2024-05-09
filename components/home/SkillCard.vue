@@ -5,17 +5,17 @@
       <div>
         <font-awesome-icon icon="fa-brands fa-python" />
         <p class="skill-name">Python 3 年</p>
-        <button>查看相關作品</button>
+        <button disabled>查看相關作品</button>
       </div>
       <div>
         <font-awesome-icon icon="fa-brands fa-html5" />
         <p class="skill-name">網頁前端 3 年</p>
-        <button>查看相關作品</button>
+        <button disabled>查看相關作品</button>
       </div>
       <div>
         <font-awesome-icon icon="fa-brands fa-unity" />
         <p class="skill-name">遊戲開發 1 年</p>
-        <button>查看相關作品</button>
+        <button disabled>查看相關作品</button>
       </div>
     </div>
   </section>
@@ -66,10 +66,11 @@ library.add(faGithub, faDiscord, faHtml5, faUnity, faPython);
         width: 100%;
         color: inherit;
         transition: 200ms;
+        cursor: not-allowed;
 
-        &:hover {
+        &:not([disabled]):hover {
           background-color: #6f7a86;
-          cursor: pointer;
+
         }
       }
 
