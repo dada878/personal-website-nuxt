@@ -21,6 +21,8 @@
         <p>- SITCON 2024 開發組</p>
         <p>- 銘傳大學 APCS 暑訓助教</p>
         <p>- Hour of Code 雲林場助教</p>
+        <p>- Hour of Code 屏東場講師</p>
+        <p>- 一日資訊體驗營台南場講師</p>
       </div>
     </div>
   </section>
